@@ -3,62 +3,192 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Cash It or Chance It | MadeToPlayGames</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Cash It or Chance It | 40th Birthday Edition | MadeToPlayGames
+  </title>
 
   <meta
     name="description"
-    content="Cash It or Chance It - a personalized interactive party game by MadeToPlayGames."
+    content="Cash It or Chance It - a personalized interactive 40th birthday party game by MadeToPlayGames."
   >
 
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="styles.css">
+  <link
+    rel="icon"
+    href="images/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+
 </head>
+
 
 <body>
 
-  <!-- Intro Video Container -->
+
+  <!-- =====================================================
+       INTRO VIDEO
+  ====================================================== -->
+
   <div id="introVideoContainer">
 
-    <video id="introVideo" playsinline>
-      <source src="videos/intro.mp4" type="video/mp4">
+    <video
+      id="introVideo"
+      playsinline
+    >
+
+      <source
+        src="videos/intro.mp4"
+        type="video/mp4"
+      >
+
       Your browser does not support the video tag.
+
     </video>
 
+
     <div id="introButtons">
-      <button id="introPlayButton">Play Intro</button>
-      <button id="introFullScreenButton">Full Screen</button>
-      <button id="skipIntroButton">Skip Intro</button>
+
+      <button id="introPlayButton">
+        Play Intro
+      </button>
+
+      <button id="introFullScreenButton">
+        Full Screen
+      </button>
+
+      <button id="skipIntroButton">
+        Skip Intro
+      </button>
+
     </div>
 
   </div>
 
 
-  <!-- Loading Overlay -->
-  <div id="loadingOverlay">Loading...</div>
+
+  <!-- =====================================================
+       LOADING OVERLAY
+  ====================================================== -->
+
+  <div id="loadingOverlay">
+    Loading...
+  </div>
 
 
-  <!-- Header -->
-  <header>
+
+  <!-- =====================================================
+       40TH BIRTHDAY HEADER
+  ====================================================== -->
+
+  <header id="birthdayHeader">
+
 
     <div id="headerContent">
 
-      <img
-        id="headerPhoto"
-        src="images/Susan.webp"
-        alt="Susan's 75th Birthday"
-        loading="lazy"
-      >
 
-      <div id="headerTitles">
-        <h1>Susan's 75th</h1>
-        <h1>Cash It or Chance It</h1>
+      <!-- =================================================
+           LEFT BIRTHDAY MESSAGE
+      ================================================== -->
+
+      <div class="birthdaySideMessage birthdaySideLeft">
+
+        <span>
+          FORTY LOOKS
+        </span>
+
+        <span>
+          GOOD ON YOU!
+        </span>
+
       </div>
 
 
-      <!-- Header Buttons -->
+
+      <!-- =================================================
+           BIRTHDAY PERSON
+      ================================================== -->
+
+      <div id="birthdayPerson">
+
+        <div id="birthdayPhotoFrame">
+
+          <img
+            id="headerPhoto"
+            src="images/BirthdayPerson.webp"
+            alt="40th Birthday"
+          >
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           MAIN GAME TITLE
+      ================================================== -->
+
+      <div id="headerTitles">
+
+        <h1 id="gameTitle">
+
+          <span class="titleLine">
+            CASH IT
+          </span>
+
+          <span class="titleOr">
+            OR
+          </span>
+
+          <span class="titleLine">
+            CHANCE IT
+          </span>
+
+        </h1>
+
+
+        <div id="birthdayEdition">
+          40th Birthday Edition
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           RIGHT BIRTHDAY MESSAGE
+      ================================================== -->
+
+      <div class="birthdaySideMessage birthdaySideRight">
+
+        <span>
+          40 AND
+        </span>
+
+        <span>
+          THRIVING!
+        </span>
+
+      </div>
+
+
+
+      <!-- =================================================
+           HEADER CONTROLS
+      ================================================== -->
+
       <div id="headerButtons">
+
 
         <button
           id="fullScreenBtn"
@@ -67,52 +197,210 @@
           Full Screen
         </button>
 
+
         <button id="watchIntroBtn">
           Watch Intro Again
         </button>
+
+
+        <!-- Background Music Button -->
+
+        <button
+          id="musicToggleBtn"
+          type="button"
+        >
+          🔊 Music On
+        </button>
+
 
       </div>
 
     </div>
 
+
+
+    <!-- =================================================
+         GOLD DIVIDER
+    ================================================== -->
+
+    <div class="goldDivider"></div>
+
+
   </header>
 
 
-  <!-- Game -->
-  <main>
+
+  <!-- =====================================================
+       MAIN GAME AREA
+  ====================================================== -->
+
+  <main id="gameArea">
+
+
+    <!-- ===================================================
+         BRIEFCASES / PHOTO CARDS
+    ==================================================== -->
 
     <section id="briefcasesSection">
 
+
       <div id="briefcasesContainer"></div>
 
+
+
+      <!-- ===============================================
+           GAME INSTRUCTIONS
+      ================================================ -->
+
       <div id="briefcasesInfo">
+
         <p id="gameMessage">
           Choose a photo to make your personal pick.
         </p>
+
       </div>
+
 
     </section>
 
 
-    <!-- Prize Board -->
+
+    <!-- ===================================================
+         PRIZE BOARD
+    ==================================================== -->
+
     <aside id="prizesSection">
 
-      <h2>Prizes</h2>
+
+      <div class="prizeBoardHeader">
+
+        <h2>
+          Prizes
+        </h2>
+
+      </div>
+
+
       <ul id="prizeBoard"></ul>
 
-      <h2>Previous Offers</h2>
-      <ul id="offersHistory"></ul>
+
+
+      <!-- ===============================================
+           PREVIOUS OFFERS
+      ================================================ -->
+
+      <div id="previousOffersSection">
+
+        <h2>
+          Previous Offers
+        </h2>
+
+        <ul id="offersHistory"></ul>
+
+      </div>
+
 
     </aside>
+
 
   </main>
 
 
-  <!-- Fireworks -->
+
+  <!-- =====================================================
+       BIRTHDAY FOOTER
+  ====================================================== -->
+
+  <div id="birthdayFooter">
+
+
+    <!-- Left Message -->
+
+    <div class="birthdayFooterSide">
+
+      <span>
+        SAME PERSON.
+      </span>
+
+      <span>
+        BIGGER ADVENTURES!
+      </span>
+
+    </div>
+
+
+
+    <!-- Center -->
+
+    <div id="birthdayFooterCenter">
+
+      <span class="footerSparkle">
+        ✦
+      </span>
+
+      <span class="footerHeart">
+        ♥
+      </span>
+
+      <div id="birthdayFooterText">
+        Cheers to 40!
+      </div>
+
+      <span class="footerHeart">
+        ♥
+      </span>
+
+      <span class="footerSparkle">
+        ✦
+      </span>
+
+    </div>
+
+
+
+    <!-- Right Message -->
+
+    <div class="birthdayFooterSide">
+
+      <span>
+        GOOD FRIENDS.
+      </span>
+
+      <span>
+        BIGGER PLANS!
+      </span>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- =====================================================
+       FIREWORKS
+  ====================================================== -->
+
   <div id="fireworksContainer"></div>
 
 
-  <!-- Audio -->
+
+  <!-- =====================================================
+       BACKGROUND MUSIC
+  ====================================================== -->
+
+  <audio
+    id="backgroundMusic"
+    src="audio/quiz-master.mp3"
+    preload="auto"
+    loop
+  ></audio>
+
+
+
+  <!-- =====================================================
+       GAME SOUND EFFECTS
+  ====================================================== -->
 
   <audio
     id="clickSound"
@@ -120,11 +408,13 @@
     preload="auto"
   ></audio>
 
+
   <audio
     id="offerSound"
     src="audio/offer.mp3"
     preload="auto"
   ></audio>
+
 
   <audio
     id="declineSound"
@@ -132,17 +422,20 @@
     preload="auto"
   ></audio>
 
+
   <audio
     id="applause"
     src="audio/applause.mp3"
     preload="auto"
   ></audio>
 
+
   <audio
     id="suspenseMusic"
     src="audio/jaws.mp3"
     preload="auto"
   ></audio>
+
 
   <audio
     id="finalSwapMusic"
@@ -151,41 +444,328 @@
   ></audio>
 
 
-  <!-- Offer Modal -->
 
-  <div id="offerModal" class="modal">
+  <!-- =====================================================
+       OFFER MODAL
+  ====================================================== -->
+
+  <div
+    id="offerModal"
+    class="modal"
+  >
 
     <div class="modal-content">
+
       <div id="offerDetails"></div>
+
     </div>
 
   </div>
 
 
-  <!-- Scripts -->
 
-  <script defer src="scripts/data.js"></script>
-  <script defer src="scripts/render.js"></script>
-  <script defer src="scripts/sounds.js"></script>
-  <script defer src="scripts/game.js"></script>
-  <script defer src="scripts/effects.js"></script>
-  <script defer src="scripts/screen.js"></script>
-  <script defer src="scripts/intro.js"></script>
+  <!-- =====================================================
+       JAVASCRIPT FILES
+  ====================================================== -->
 
+  <script
+    defer
+    src="scripts/data.js"
+  ></script>
+
+  <script
+    defer
+    src="scripts/render.js"
+  ></script>
+
+  <script
+    defer
+    src="scripts/sounds.js"
+  ></script>
+
+  <script
+    defer
+    src="scripts/game.js"
+  ></script>
+
+  <script
+    defer
+    src="scripts/effects.js"
+  ></script>
+
+  <script
+    defer
+    src="scripts/screen.js"
+  ></script>
+
+  <script
+    defer
+    src="scripts/intro.js"
+  ></script>
+
+
+
+  <!-- =====================================================
+       BACKGROUND MUSIC CONTROLS
+  ====================================================== -->
 
   <script>
+
+    /* =====================================================
+       BACKGROUND MUSIC
+    ====================================================== */
+
+    const backgroundMusic =
+      document.getElementById("backgroundMusic");
+
+    const musicToggleBtn =
+      document.getElementById("musicToggleBtn");
+
+
+    /*
+      Keep the background music quiet so the
+      game's sound effects remain easy to hear.
+    */
+
+    backgroundMusic.volume = 0.12;
+
+
+    let musicEnabled = true;
+
+
+
+    /* =====================================================
+       START MUSIC
+    ====================================================== */
+
+    function startBackgroundMusic() {
+
+      if (!musicEnabled) {
+        return;
+      }
+
+      backgroundMusic
+        .play()
+        .catch(function(error) {
+
+          console.log(
+            "Background music is waiting for user interaction."
+          );
+
+        });
+
+    }
+
+
+
+    /* =====================================================
+       STOP MUSIC
+    ====================================================== */
+
+    function stopBackgroundMusic() {
+
+      backgroundMusic.pause();
+
+    }
+
+
+
+    /* =====================================================
+       MUSIC BUTTON
+    ====================================================== */
+
+    musicToggleBtn.addEventListener(
+      "click",
+      function() {
+
+        if (backgroundMusic.paused) {
+
+          musicEnabled = true;
+
+          backgroundMusic
+            .play()
+            .catch(function(error) {
+
+              console.log(
+                "Unable to start background music:",
+                error
+              );
+
+            });
+
+          musicToggleBtn.textContent =
+            "🔊 Music On";
+
+        }
+
+        else {
+
+          musicEnabled = false;
+
+          backgroundMusic.pause();
+
+          musicToggleBtn.textContent =
+            "🔇 Music Off";
+
+        }
+
+      }
+    );
+
+
+
+    /* =====================================================
+       START MUSIC AFTER SKIPPING INTRO
+    ====================================================== */
+
+    const skipIntroButton =
+      document.getElementById("skipIntroButton");
+
+
+    if (skipIntroButton) {
+
+      skipIntroButton.addEventListener(
+        "click",
+        function() {
+
+          setTimeout(
+            startBackgroundMusic,
+            300
+          );
+
+        }
+      );
+
+    }
+
+
+
+    /* =====================================================
+       START MUSIC WHEN INTRO FINISHES
+    ====================================================== */
+
+    const introVideo =
+      document.getElementById("introVideo");
+
+
+    if (introVideo) {
+
+      introVideo.addEventListener(
+        "ended",
+        function() {
+
+          setTimeout(
+            startBackgroundMusic,
+            300
+          );
+
+        }
+      );
+
+    }
+
+
+
+    /* =====================================================
+       WATCH INTRO AGAIN
+    ====================================================== */
+
+    const watchIntroBtn =
+      document.getElementById("watchIntroBtn");
+
+
+    if (watchIntroBtn) {
+
+      watchIntroBtn.addEventListener(
+        "click",
+        function() {
+
+          stopBackgroundMusic();
+
+        }
+      );
+
+    }
+
+
+
+    /* =====================================================
+       IF USER INTERACTS WITH GAME
+       AND MUSIC HAS NOT STARTED YET
+    ====================================================== */
+
+    document.addEventListener(
+      "click",
+      function startMusicOnFirstInteraction(event) {
+
+        /*
+          Do not start it if the user has
+          deliberately turned music off.
+        */
+
+        if (!musicEnabled) {
+          return;
+        }
+
+
+        /*
+          Don't start game music while
+          the intro video is visible.
+        */
+
+        const introContainer =
+          document.getElementById(
+            "introVideoContainer"
+          );
+
+
+        if (
+          introContainer &&
+          window.getComputedStyle(
+            introContainer
+          ).display !== "none"
+        ) {
+
+          return;
+
+        }
+
+
+        if (backgroundMusic.paused) {
+
+          startBackgroundMusic();
+
+        }
+
+      }
+    );
+
+
+
+    /* =====================================================
+       PAGE LOAD
+    ====================================================== */
+
     window.onload = function() {
 
-      document.getElementById("loadingOverlay").style.display =
+      document.getElementById(
+        "loadingOverlay"
+      ).style.display =
         "none";
+
 
       renderBriefcases();
 
+
       updateSidePanels();
 
+
       showRoundModal(1);
+
     };
+
   </script>
+
 
 </body>
 

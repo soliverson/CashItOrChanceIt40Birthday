@@ -1,6 +1,31 @@
-/* ======================================================
-   BASE
-   ====================================================== */
+/* ==========================================================
+   CASH IT OR CHANCE IT
+   40TH BIRTHDAY EDITION
+   ========================================================== */
+
+
+/* ==========================================================
+   VARIABLES
+   ========================================================== */
+
+:root {
+  --black: #000000;
+  --black-soft: #090909;
+  --black-card: #111111;
+
+  --gold: #d4af37;
+  --gold-bright: #ffd700;
+  --gold-light: #fff0a6;
+  --gold-dark: #8a6412;
+
+  --silver: #d9d9d9;
+  --silver-dark: #858585;
+}
+
+
+/* ==========================================================
+   RESET / BASE
+   ========================================================== */
 
 * {
   box-sizing: border-box;
@@ -9,90 +34,240 @@
 html {
   margin: 0;
   padding: 0;
+
   width: 100%;
   min-height: 100%;
-  background: #000 !important;
+
+  background: #000;
 }
 
 body {
   margin: 0;
   padding: 5px;
+
   width: 100%;
   min-height: 100vh;
 
-  background: #000 !important;
+  background:
+    radial-gradient(
+      circle at top center,
+      #181107 0%,
+      #080808 32%,
+      #000 70%
+    );
 
-  color: #d4af37;
+  color: var(--gold);
 
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
   font-size: 1em;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
 
-/* ======================================================
-   HEADER
-   ====================================================== */
-
-header {
-  position: relative;
-
-  background: #000;
-
-  border-bottom: 2px solid #d4af37;
-
-  padding-bottom: 5px;
-  margin-bottom: 5px;
+  list-style: none;
 }
 
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+#birthdayHeader {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0 0 7px;
+
+  padding:
+    7px
+    10px
+    4px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #181006 0%,
+      #050505 60%,
+      #000 100%
+    );
+
+  border-bottom:
+    2px solid var(--gold);
+
+  overflow: visible;
+}
+
+
+/* ==========================================================
+   HEADER CONTENT
+   ========================================================== */
+
 #headerContent {
+  position: relative;
+
+  width: 100%;
+  min-height: 165px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(120px, 0.8fr)
+    160px
+    minmax(400px, 2.8fr)
+    minmax(120px, 0.8fr)
+    150px;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  background: transparent;
+}
+
+
+/* ==========================================================
+   BIRTHDAY PERSON
+   ========================================================== */
+
+#birthdayPerson {
   display: flex;
 
   justify-content: center;
   align-items: center;
 
-  flex-wrap: wrap;
+  z-index: 5;
+}
 
-  background: #000;
+#birthdayPhotoFrame {
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff4a8,
+      #d4af37,
+      #805900,
+      #ffd700
+    );
+
+  border:
+    3px solid var(--gold-bright);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 0 10px #ffd700,
+    0 0 22px rgba(255, 215, 0, 0.65),
+    inset 0 0 10px rgba(255, 255, 255, 0.55);
+}
+
+#birthdayPhotoFrame::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -7px;
+
+  border:
+    1px solid rgba(255, 215, 0, 0.55);
+
+  border-radius: 17px;
+
+  pointer-events: none;
 }
 
 #headerPhoto {
-  width: 118px;
-  height: auto;
+  display: block;
+
+  width: 145px;
+  height: 145px;
+
+  margin: 0;
 
   object-fit: cover;
+  object-position: center top;
 
-  border: 4px solid #ffd700;
+  border: none;
+  border-radius: 9px;
 
-  border-radius: 10px;
-
-  box-shadow:
-    0 0 15px #ffd700,
-    0 0 25px rgba(255, 215, 0, 0.45);
-
-  margin: 5px;
+  box-shadow: none;
 }
+
+
+/* ==========================================================
+   TITLE
+   ========================================================== */
 
 #headerTitles {
   display: flex;
 
   flex-direction: column;
 
+  justify-content: center;
   align-items: center;
+
+  width: 100%;
+
+  text-align: center;
 }
 
-h1 {
-  font-size: clamp(2.3rem, 3vw, 3.1rem);
+#gameTitle {
+  display: grid;
 
-  margin: 2px 0;
+  grid-template-columns:
+    auto
+    auto
+    auto;
 
-  line-height: 1;
+  justify-content: center;
+  align-items: center;
+
+  column-gap: 12px;
+
+  width: 100%;
+
+  margin: 0;
+
+  padding:
+    8px
+    15px;
+
+  font-size:
+    clamp(
+      2rem,
+      3vw,
+      3.7rem
+    );
+
+  font-weight: 1000;
+
+  line-height: 0.95;
+
+  letter-spacing: 1px;
 
   background:
     linear-gradient(
-      45deg,
-      #fff,
-      #ffd700,
-      #fff
+      180deg,
+      #fff6bf 0%,
+      #ffd968 22%,
+      #d99b1c 55%,
+      #fff0a4 80%,
+      #b87700 100%
     );
 
   -webkit-background-clip: text;
@@ -100,178 +275,386 @@ h1 {
 
   background-clip: text;
 
-  animation: shine 3s ease-in-out infinite;
+  filter:
+    drop-shadow(
+      0 3px 1px rgba(0, 0, 0, 0.9)
+    );
 
-  text-shadow:
-    0 0 10px gold,
-    0 0 2px goldenrod;
+  animation:
+    titleShine
+    3s
+    ease-in-out
+    infinite;
 }
 
-@keyframes shine {
-  0% {
-    filter: brightness(1);
+@keyframes titleShine {
+  0%,
+  100% {
+    filter:
+      brightness(1)
+      drop-shadow(
+        0 3px 1px rgba(0, 0, 0, 0.9)
+      );
   }
 
   50% {
-    filter: brightness(1.5);
-  }
-
-  100% {
-    filter: brightness(1);
+    filter:
+      brightness(1.25)
+      drop-shadow(
+        0 3px 1px rgba(0, 0, 0, 0.9)
+      );
   }
 }
 
+.titleLine {
+  display: inline-block;
 
-/* ======================================================
-   HEADER BUTTONS
-   ====================================================== */
+  white-space: nowrap;
+}
 
-#headerButtons {
-  position: absolute;
+.titleOr {
+  display: inline-flex;
 
-  top: 10px;
-  right: 10px;
+  justify-content: center;
+  align-items: center;
+
+  padding:
+    4px
+    8px;
+
+  color: #000;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff3a0,
+      #d4af37
+    );
+
+  -webkit-text-fill-color: #000;
+
+  border-radius: 6px;
+
+  font-size: 0.42em;
+
+  font-weight: 1000;
+
+  line-height: 1;
+}
+
+
+/* ==========================================================
+   40TH BIRTHDAY EDITION
+   ========================================================== */
+
+#birthdayEdition {
+  margin-top: 7px;
+
+  font-family:
+    "Brush Script MT",
+    "Segoe Script",
+    cursive;
+
+  font-size:
+    clamp(
+      1.7rem,
+      2.5vw,
+      3rem
+    );
+
+  line-height: 1;
+
+  font-weight: 400;
+
+  color: #fff1b8;
+
+  text-shadow:
+    0 0 6px #ffd700,
+    0 0 15px rgba(255, 196, 0, 0.85),
+    0 0 28px rgba(255, 170, 0, 0.45);
+}
+
+
+/* ==========================================================
+   SIDE BIRTHDAY SIGNS
+   ========================================================== */
+
+.birthdaySideMessage {
+  min-height: 115px;
 
   display: flex;
 
   flex-direction: column;
 
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+
+  padding:
+    10px
+    7px;
+
+  text-align: center;
+
+  color: #f5cf68;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111,
+      #030303
+    );
+
+  border:
+    2px solid var(--gold);
+
+  border-radius: 5px;
+
+  box-shadow:
+    0 0 10px rgba(255, 215, 0, 0.25),
+    inset 0 0 15px rgba(255, 215, 0, 0.06);
+
+  font-family:
+    "Segoe Print",
+    "Comic Sans MS",
+    cursive;
+
+  font-size:
+    clamp(
+      0.8rem,
+      1vw,
+      1.15rem
+    );
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  transform:
+    rotate(-1deg);
+}
+
+.birthdaySideRight {
+  transform:
+    rotate(1deg);
+}
+
+.birthdaySideMessage span {
+  display: block;
+}
+
+
+/* ==========================================================
+   HEADER BUTTONS
+   ========================================================== */
+
+#headerButtons {
+  position: static;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: stretch;
+
+  gap: 7px;
+
+  width: 100%;
 }
 
 #fullScreenBtn,
 #watchIntroBtn {
-  background: rgba(212, 175, 55, 0.95);
+  width: 100%;
 
-  border: 1px solid #d4af37;
+  margin: 0;
 
-  border-radius: 5px;
+  padding:
+    9px
+    10px;
 
-  padding: 6px 12px;
+  background:
+    linear-gradient(
+      180deg,
+      #f6d35e,
+      #bd8f17
+    );
 
-  font-size: 0.9em;
+  border:
+    1px solid #ffe47a;
+
+  border-radius: 7px;
 
   color: #000;
 
-  margin-bottom: 5px;
+  font-size:
+    clamp(
+      0.75rem,
+      0.9vw,
+      1rem
+    );
+
+  font-weight: 700;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.7),
+    inset 0 1px 2px rgba(255, 255, 255, 0.55);
+
+  cursor: pointer;
 }
 
 #fullScreenBtn:hover,
 #watchIntroBtn:hover {
-  background: #ffd700;
+  background:
+    linear-gradient(
+      180deg,
+      #fff2a0,
+      #ffd700
+    );
+
+  transform:
+    translateY(-1px);
 }
 
 
-/* ======================================================
-   MAIN
-   ====================================================== */
+/* ==========================================================
+   GOLD DIVIDER
+   ========================================================== */
 
-main {
-  display: flex;
+.goldDivider {
+  width: 100%;
+  height: 3px;
+
+  margin-top: 5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #8f6712,
+      #ffd700,
+      #fff2a4,
+      #ffd700,
+      #8f6712,
+      transparent
+    );
+
+  box-shadow:
+    0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+
+/* ==========================================================
+   MAIN GAME
+   ========================================================== */
+
+main,
+#gameArea {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(220px, 250px);
 
   width: 100%;
 
-  max-width: 1300px;
+  max-width: 1600px;
 
-  margin: 0 auto;
+  margin:
+    0
+    auto;
 
-  gap: 10px;
+  gap: 12px;
 
-  background: #000;
+  background: transparent;
 }
 
 
-/* ======================================================
+/* ==========================================================
    BRIEFCASE SECTION
-   ====================================================== */
+   ========================================================== */
 
 #briefcasesSection {
-  flex: 2;
-
   min-width: 0;
 
-  margin-right: 10px;
+  width: 100%;
+
+  margin: 0;
+
+  padding:
+    14px
+    8px
+    5px;
 
   text-align: center;
 
-  background: #000;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(16, 16, 16, 0.96),
+      rgba(0, 0, 0, 0.98)
+    );
 
-  border-radius: 5px;
+  border:
+    1px solid rgba(212, 175, 55, 0.45);
 
-  padding: 10px;
+  border-radius: 8px;
+
+  box-shadow:
+    inset 0 0 25px rgba(255, 215, 0, 0.04);
 }
 
 
-/* ======================================================
+/* ==========================================================
    BRIEFCASE GRID
-   ====================================================== */
+   ========================================================== */
 
 #briefcasesContainer {
   display: grid;
 
   grid-template-columns:
-    repeat(7, minmax(90px, 115px));
+    repeat(
+      7,
+      minmax(0, 1fr)
+    );
 
   justify-content: center;
 
-  align-items: start;
+  align-items: stretch;
 
-  gap: 6px;
+  gap:
+    18px
+    8px;
 
   width: 100%;
 
-  margin: 0 auto;
+  margin:
+    0
+    auto;
 
-  background: #000;
+  padding:
+    5px
+    0
+    0;
+
+  background: transparent;
 }
 
 
-/* ======================================================
-   GAME MESSAGE
-   ====================================================== */
-
-#briefcasesInfo {
-  margin-top: 8px;
-
-  background: #000;
-}
-
-#gameMessage {
-  margin: 0;
-
-  text-align: center;
-
-  font-weight: 800;
-
-  color: #ffd700;
-
-  font-size:
-    clamp(
-      20px,
-      1.7vw,
-      30px
-    );
-
-  text-shadow:
-    0 0 6px
-    rgba(255, 215, 0, 0.65);
-}
-
-
-/* ======================================================
+/* ==========================================================
    BRIEFCASES
-   ====================================================== */
+   ========================================================== */
 
 .briefcase {
   position: relative;
 
-  background-color: #c0c0c0;
+  width: 100%;
+  min-width: 0;
 
-  border: 2px solid #c0c0c0;
-
-  border-radius: 8px;
-
-  padding: 3px;
+  padding:
+    5px
+    5px
+    4px;
 
   display: flex;
 
@@ -279,9 +662,30 @@ main {
 
   align-items: center;
 
-  min-width: 0;
-
   color: #000;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f7f7f7 0%,
+      #bcbcbc 15%,
+      #eeeeee 34%,
+      #8d8d8d 55%,
+      #e8e8e8 77%,
+      #a4a4a4 100%
+    );
+
+  border:
+    2px solid #e3e3e3;
+
+  border-radius: 11px;
+
+  box-shadow:
+    0 3px 5px rgba(0, 0, 0, 0.9),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.3);
+
+  overflow: visible;
 
   user-select: none;
 
@@ -289,69 +693,170 @@ main {
 
   transition:
     transform 0.2s ease,
-    background-color 0.3s ease,
+    background 0.2s ease,
     box-shadow 0.2s ease;
-
-  overflow: hidden;
 }
 
-.briefcase:not(.center-open):not(.personal-box-reveal):hover {
-  transform: scale(1.04);
 
-  background-color:
-    rgba(255, 215, 0, 0.6);
+/* ==========================================================
+   BRIEFCASE HANDLE
+   ========================================================== */
+
+.briefcase::before {
+  content: "";
+
+  position: absolute;
+
+  top: -14px;
+  left: 50%;
+
+  width: 42%;
+  height: 14px;
+
+  transform:
+    translateX(-50%);
+
+  border:
+    4px solid #bababa;
+
+  border-bottom: 0;
+
+  border-radius:
+    7px
+    7px
+    0
+    0;
+
+  background: #4d4d4d;
 
   box-shadow:
-    0 0 8px
-    rgba(255, 215, 0, 0.6);
+    inset 0 0 2px #fff,
+    0 1px 2px rgba(0, 0, 0, 0.8);
+
+  pointer-events: none;
+}
+
+.briefcase::after {
+  content: "";
+
+  position: absolute;
+
+  top: -8px;
+  left: 50%;
+
+  width: 30%;
+  height: 6px;
+
+  transform:
+    translateX(-50%);
+
+  background: #111;
+
+  border-radius:
+    4px
+    4px
+    0
+    0;
+
+  pointer-events: none;
 }
 
 
-/* ======================================================
+/* ==========================================================
+   BRIEFCASE HOVER
+   ========================================================== */
+
+.briefcase:not(.center-open):not(.personal-box-reveal):hover {
+  transform:
+    translateY(-3px)
+    scale(1.025);
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffbe0,
+      #d6bd66,
+      #f7f7f7,
+      #8d8d8d
+    );
+
+  box-shadow:
+    0 0 10px rgba(255, 215, 0, 0.8),
+    0 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+
+/* ==========================================================
    BRIEFCASE PHOTOS
-   ====================================================== */
+   ========================================================== */
 
 .briefcase-img {
   display: block;
 
   width: 100%;
 
-  aspect-ratio: 2 / 3;
+  aspect-ratio:
+    4 / 5;
 
   object-fit: cover;
 
-  object-position: center top;
+  object-position:
+    center top;
 
   margin: 0;
 
-  border-radius: 5px;
+  border:
+    2px solid rgba(75, 75, 75, 0.55);
+
+  border-radius: 6px;
+
+  background: #222;
 }
 
 
-/* ======================================================
-   BOX NUMBER
-   ====================================================== */
+/* ==========================================================
+   BRIEFCASE NUMBER
+   ========================================================== */
 
 .briefcase-number {
   width: 100%;
 
-  margin-top: 2px;
+  margin-top: 4px;
 
-  padding: 4px 6px;
+  padding:
+    5px
+    4px;
 
   text-align: center;
 
-  font-weight: bold;
+  font-weight: 900;
 
-  font-size: 1em;
+  font-size:
+    clamp(
+      0.9rem,
+      1.25vw,
+      1.25rem
+    );
 
   line-height: 1;
 
   color: #000;
 
-  background: #ffd700;
+  background:
+    linear-gradient(
+      180deg,
+      #fff1a1,
+      #f4c33d 40%,
+      #d39b14 100%
+    );
 
-  border-radius: 4px;
+  border:
+    1px solid #fff0a0;
+
+  border-radius: 5px;
+
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.7);
 
   white-space: nowrap;
 
@@ -361,122 +866,233 @@ main {
 }
 
 
-/* ======================================================
-   PERSONAL BOX IN GRID
-   ====================================================== */
+/* ==========================================================
+   PERSONAL BOX
+   ========================================================== */
 
 .briefcase.personal {
   background:
     linear-gradient(
-      135deg,
-      rgba(255, 215, 0, 0.95),
-      rgba(255, 215, 0, 0.55)
+      145deg,
+      #fff8c9,
+      #d4af37,
+      #fff,
+      #9b7414
     );
 
-  border: 5px solid #ffd700;
+  border:
+    4px solid var(--gold-bright);
 
-  transform: scale(1.04);
+  transform:
+    scale(1.03);
 
   z-index: 20;
 
   animation:
-    pulseHighlight
-    1.3s
+    birthdayPersonalPulse
+    1.4s
+    ease-in-out
     infinite;
 }
 
 .briefcase.personal:hover {
-  transform: scale(1.04);
+  transform:
+    scale(1.03);
 }
 
-@keyframes pulseHighlight {
-  0% {
+@keyframes birthdayPersonalPulse {
+  0%,
+  100% {
     box-shadow:
-      0 0 10px #ffd700,
-      0 0 18px rgba(255, 215, 0, 0.65);
+      0 0 8px #ffd700,
+      0 0 16px rgba(255, 215, 0, 0.5);
   }
 
   50% {
     box-shadow:
-      0 0 16px #ffd700,
+      0 0 15px #ffd700,
       0 0 30px #ffd700,
-      0 0 42px rgba(255, 215, 0, 0.8);
-  }
-
-  100% {
-    box-shadow:
-      0 0 10px #ffd700,
-      0 0 18px rgba(255, 215, 0, 0.65);
+      0 0 40px rgba(255, 215, 0, 0.45);
   }
 }
 
 
-/* ======================================================
+/* ==========================================================
    OPENED BOX
-   ====================================================== */
+   ========================================================== */
 
 .briefcase.opened {
-  opacity: 0.5;
+  opacity: 0.4;
+
+  filter:
+    grayscale(0.75);
 }
 
 
-/* ======================================================
-   PRIZE SECTION
-   ====================================================== */
+/* ==========================================================
+   GAME MESSAGE
+   ========================================================== */
 
-#prizesSection {
-  flex: 0 0 220px;
+#briefcasesInfo {
+  margin-top: 10px;
 
-  border-left:
-    2px solid #d4af37;
+  padding:
+    5px
+    5px
+    2px;
 
-  padding-left: 8px;
+  background: transparent;
+}
+
+#gameMessage {
+  margin: 0;
 
   text-align: center;
 
-  background: #000;
+  color: #f6d05a;
+
+  font-family:
+    "Segoe Script",
+    "Brush Script MT",
+    cursive;
+
+  font-size:
+    clamp(
+      1.35rem,
+      1.8vw,
+      2rem
+    );
+
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  text-shadow:
+    0 0 7px #d4af37,
+    0 0 15px rgba(255, 215, 0, 0.45);
+}
+
+
+/* ==========================================================
+   PRIZE SECTION
+   ========================================================== */
+
+#prizesSection {
+  min-width: 0;
+
+  width: 100%;
+
+  margin: 0;
+
+  padding:
+    8px
+    10px
+    12px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #101010,
+      #020202
+    );
+
+  border:
+    2px solid var(--gold);
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 0 10px rgba(255, 215, 0, 0.25),
+    inset 0 0 20px rgba(255, 215, 0, 0.04);
+}
+
+.prizeBoardHeader {
+  width: 100%;
+
+  margin:
+    0
+    0
+    7px;
+
+  padding:
+    7px
+    4px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #1c1606,
+      #050505
+    );
+
+  border:
+    1px solid var(--gold);
+
+  border-radius: 5px;
 }
 
 #prizesSection h2 {
   margin:
-    5px
+    4px
     0
     8px;
 
   font-size:
     clamp(
-      1.45rem,
-      2vw,
-      2rem
+      1.35rem,
+      1.8vw,
+      1.9rem
     );
 
   line-height: 1;
 
-  color: #ffd700;
+  color: #f9cf45;
 
-  font-weight: 900;
+  font-weight: 1000;
+
+  text-transform: uppercase;
 
   text-shadow:
-    0 0 10px
-    rgba(255, 215, 0, 0.75);
+    0 0 7px rgba(255, 215, 0, 0.7);
+}
+
+.prizeBoardHeader h2 {
+  margin: 0 !important;
 }
 
 
-/* ======================================================
+/* ==========================================================
    PRIZE BOARD
-   ====================================================== */
+   ========================================================== */
 
 #prizeBoard {
   display: grid;
 
   grid-template-columns:
-    repeat(2, 1fr);
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
 
   gap:
-    3px
+    2px
+    12px;
+
+  width: 100%;
+
+  margin:
+    0
+    0
     10px;
 
-  background: #000;
+  padding:
+    4px
+    4px
+    8px;
+
+  background: transparent;
 }
 
 .prize-column {
@@ -488,39 +1104,74 @@ main {
 }
 
 #prizeBoard li {
-  margin: 3px 0;
+  margin:
+    3px
+    0;
 
   font-size:
     clamp(
-      1rem,
-      1.15vw,
-      1.3rem
+      0.9rem,
+      1.05vw,
+      1.15rem
     );
 
   line-height: 1.15;
 
-  font-weight: 700;
+  font-weight: 900;
 
-  color: #ffd700;
+  color: #ffd83e;
 
   white-space: nowrap;
+
+  text-shadow:
+    0 0 4px rgba(255, 215, 0, 0.4);
 }
 
 #prizeBoard li.eliminated {
-  color: #666;
+  color: #555;
 
-  text-decoration: line-through;
+  opacity: 0.65;
 
-  opacity: 0.7;
+  text-decoration:
+    line-through;
 }
 
 
-/* ======================================================
+/* ==========================================================
    PREVIOUS OFFERS
-   ====================================================== */
+   ========================================================== */
+
+#previousOffersSection {
+  width: 100%;
+
+  min-height: 135px;
+
+  margin-top: 4px;
+
+  padding-top: 9px;
+
+  border-top:
+    2px solid var(--gold);
+}
+
+#previousOffersSection h2 {
+  font-size:
+    clamp(
+      1.1rem,
+      1.5vw,
+      1.6rem
+    );
+
+  line-height: 1.05;
+}
 
 #offersHistory {
-  margin-top: 5px;
+  width: 100%;
+
+  margin:
+    7px
+    0
+    0;
 
   padding: 0;
 
@@ -528,37 +1179,152 @@ main {
 }
 
 #offersHistory li {
+  margin:
+    3px
+    0;
+
+  color: #d8b746;
+
   font-size:
     clamp(
-      0.95rem,
-      1vw,
-      1.15rem
+      0.8rem,
+      0.95vw,
+      1rem
+    );
+
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+
+/* ==========================================================
+   BIRTHDAY FOOTER
+   ========================================================== */
+
+#birthdayFooter {
+  width: 100%;
+
+  max-width: 1600px;
+
+  margin:
+    7px
+    auto
+    0;
+
+  padding:
+    7px
+    14px;
+
+  display: grid;
+
+  grid-template-columns:
+    180px
+    1fr
+    180px;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #111,
+      #020202
+    );
+
+  border-top:
+    2px solid var(--gold);
+
+  border-bottom:
+    1px solid rgba(212, 175, 55, 0.5);
+}
+
+#birthdayFooterCenter {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+}
+
+#birthdayFooterText {
+  color: #ffe8a0;
+
+  font-family:
+    "Segoe Script",
+    "Brush Script MT",
+    cursive;
+
+  font-size:
+    clamp(
+      1.7rem,
+      2.8vw,
+      3rem
+    );
+
+  line-height: 1;
+
+  text-shadow:
+    0 0 7px #ffd700,
+    0 0 18px rgba(255, 180, 0, 0.7);
+}
+
+.footerHeart,
+.footerSparkle {
+  color: #ffd700;
+
+  font-size:
+    clamp(
+      1.2rem,
+      1.8vw,
+      2rem
+    );
+}
+
+.birthdayFooterSide {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  min-height: 50px;
+
+  padding:
+    6px
+    8px;
+
+  color: #efcb68;
+
+  text-align: center;
+
+  font-family:
+    "Segoe Print",
+    cursive;
+
+  font-size:
+    clamp(
+      0.7rem,
+      0.9vw,
+      0.95rem
     );
 
   line-height: 1.15;
 
-  color: #d4af37;
+  border:
+    1px solid rgba(212, 175, 55, 0.7);
 
-  margin: 3px 0;
+  background: #090909;
 }
 
 
-/* ======================================================
-   GENERAL LISTS
-   ====================================================== */
-
-ul {
-  list-style: none;
-
-  padding: 0;
-
-  margin: 0;
-}
-
-
-/* ======================================================
-   BUTTONS
-   ====================================================== */
+/* ==========================================================
+   GENERAL BUTTONS
+   ========================================================== */
 
 button {
   background:
@@ -580,13 +1346,17 @@ button {
 
   cursor: pointer;
 
-  border-radius: 12px;
+  border-radius: 10px;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
 
   font-size: 1em;
 
   box-shadow:
-    0 4px 6px
-    rgba(0, 0, 0, 0.3);
+    0 4px 6px rgba(0, 0, 0, 0.3);
 
   transition:
     transform 0.2s ease,
@@ -594,21 +1364,22 @@ button {
 }
 
 button:hover {
-  transform: scale(1.05);
+  transform:
+    scale(1.04);
 
   box-shadow:
-    0 6px 10px
-    rgba(0, 0, 0, 0.4);
+    0 6px 10px rgba(0, 0, 0, 0.4);
 }
 
 button:active {
-  transform: scale(0.98);
+  transform:
+    scale(0.98);
 }
 
 
-/* ======================================================
-   DEAL
-   ====================================================== */
+/* ==========================================================
+   DEAL BUTTON
+   ========================================================== */
 
 button.deal {
   background:
@@ -627,9 +1398,9 @@ button.deal {
 }
 
 
-/* ======================================================
-   NO DEAL
-   ====================================================== */
+/* ==========================================================
+   NO DEAL BUTTON
+   ========================================================== */
 
 button.decline {
   background:
@@ -648,9 +1419,9 @@ button.decline {
 }
 
 
-/* ======================================================
+/* ==========================================================
    MODAL
-   ====================================================== */
+   ========================================================== */
 
 .modal {
   display: none;
@@ -662,34 +1433,44 @@ button.decline {
   inset: 0;
 
   width: 100vw;
-
   height: 100vh;
 
   background:
     rgba(0, 0, 0, 0.9);
 
   justify-content: center;
-
   align-items: center;
 
   overflow: hidden;
 }
 
 .modal-content {
-  background: #222;
-
-  padding: 20px;
-
-  border:
-    2px solid #d4af37;
-
   width: 80%;
 
   max-width: 500px;
 
+  padding: 20px;
+
   text-align: center;
 
-  border-radius: 8px;
+  color: #f4ce58;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #241c08,
+      #0c0c0c 55%,
+      #020202
+    );
+
+  border:
+    3px solid var(--gold);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 0 15px rgba(255, 215, 0, 0.65),
+    0 0 40px rgba(255, 215, 0, 0.2);
 
   animation:
     modalEntrance
@@ -714,9 +1495,9 @@ button.decline {
 }
 
 
-/* ======================================================
+/* ==========================================================
    MODAL MESSAGES
-   ====================================================== */
+   ========================================================== */
 
 .message {
   margin-bottom: 10px;
@@ -772,9 +1553,9 @@ button.decline {
 }
 
 
-/* ======================================================
+/* ==========================================================
    RESULT MODAL
-   ====================================================== */
+   ========================================================== */
 
 .result-modal {
   background:
@@ -786,8 +1567,7 @@ button.decline {
     );
 
   box-shadow:
-    0 0 20px 5px
-    rgba(255, 215, 0, 0.8);
+    0 0 20px 5px rgba(255, 215, 0, 0.8);
 
   animation:
     resultPulse
@@ -804,18 +1584,20 @@ button.decline {
 @keyframes resultPulse {
   0%,
   100% {
-    transform: scale(1);
+    transform:
+      scale(1);
   }
 
   50% {
-    transform: scale(1.02);
+    transform:
+      scale(1.02);
   }
 }
 
 
-/* ======================================================
+/* ==========================================================
    FIREWORKS
-   ====================================================== */
+   ========================================================== */
 
 #fireworksContainer {
   position: fixed;
@@ -823,7 +1605,6 @@ button.decline {
   inset: 0;
 
   width: 100vw;
-
   height: 100vh;
 
   pointer-events: none;
@@ -837,7 +1618,6 @@ button.decline {
   position: absolute;
 
   width: 8px;
-
   height: 8px;
 
   background:
@@ -858,22 +1638,24 @@ button.decline {
 
 @keyframes explode {
   0% {
-    transform: scale(1);
+    transform:
+      scale(1);
 
     opacity: 1;
   }
 
   100% {
-    transform: scale(5);
+    transform:
+      scale(5);
 
     opacity: 0;
   }
 }
 
 
-/* ======================================================
-   INTRO
-   ====================================================== */
+/* ==========================================================
+   INTRO VIDEO
+   ========================================================== */
 
 #introVideoContainer {
   position: fixed;
@@ -881,7 +1663,6 @@ button.decline {
   inset: 0;
 
   width: 100vw;
-
   height: 100vh;
 
   background: #000;
@@ -891,7 +1672,6 @@ button.decline {
   flex-direction: column;
 
   justify-content: center;
-
   align-items: center;
 
   z-index: 20000;
@@ -899,22 +1679,15 @@ button.decline {
 
 #introVideo {
   width: 100%;
-
   height: 100%;
 
   object-fit: cover;
 }
 
-
-/* ======================================================
-   INTRO BUTTONS
-   ====================================================== */
-
 #introButtons {
   position: absolute;
 
   bottom: 40px;
-
   left: 50%;
 
   transform:
@@ -925,7 +1698,6 @@ button.decline {
   gap: 12px;
 
   justify-content: center;
-
   align-items: center;
 
   z-index: 21000;
@@ -952,513 +1724,14 @@ button.decline {
 }
 
 
-/* ======================================================
-   TABLET
-   ====================================================== */
-
-@media (max-width: 1200px) {
-
-  #briefcasesContainer {
-    grid-template-columns:
-      repeat(
-        5,
-        minmax(75px, 100px)
-      );
-  }
-
-  #prizesSection {
-    flex:
-      0 0 200px;
-  }
-}
-
-
-@media (max-width: 768px) {
-
-  body {
-    padding: 4px;
-  }
-
-  main {
-    flex-direction: column;
-
-    align-items: center;
-  }
-
-  #briefcasesSection {
-    width: 100%;
-
-    margin-right: 0;
-  }
-
-  #briefcasesContainer {
-    grid-template-columns:
-      repeat(
-        3,
-        minmax(85px, 1fr)
-      );
-  }
-
-  #prizesSection {
-    width: 100%;
-
-    max-width: 500px;
-
-    border-left: none;
-
-    border-top:
-      2px solid #d4af37;
-
-    margin-top: 10px;
-
-    padding-top: 10px;
-  }
-
-  #headerPhoto {
-    width: 85px;
-  }
-
-  h1 {
-    font-size: 1.7em;
-  }
-}
-
-
-/* ======================================================
-   DESKTOP / LAPTOP FULLSCREEN
-   ====================================================== */
-
-@media (min-width: 769px) {
-
-  html:fullscreen,
-  html:fullscreen body {
-    width: 100vw;
-
-    height: 100vh;
-
-    margin: 0;
-
-    padding: 0;
-
-    overflow: hidden !important;
-
-    background: #000;
-  }
-
-  body.tv-fullscreen {
-    width: 100vw;
-
-    height: 100vh;
-
-    max-height: 100vh;
-
-    margin: 0;
-
-    padding: 0;
-
-    overflow: hidden !important;
-
-    background: #000;
-
-    display: flex;
-
-    flex-direction: column;
-  }
-
-
-  /* ---------------- FULLSCREEN HEADER ---------------- */
-
-  body.tv-fullscreen header {
-    flex: 0 0 13vh;
-
-    height: 13vh;
-
-    min-height: 0;
-
-    margin: 0;
-
-    padding:
-      0
-      1vw;
-  }
-
-  body.tv-fullscreen #headerContent {
-    height: 100%;
-
-    flex-direction: row;
-
-    flex-wrap: nowrap;
-
-    align-items: center;
-  }
-
-  body.tv-fullscreen #headerPhoto {
-    height: 10.8vh;
-
-    width: auto;
-
-    max-width: 9vw;
-
-    object-fit: cover;
-
-    border-width: 4px;
-  }
-
-  body.tv-fullscreen #headerTitles {
-    flex: 1;
-  }
-
-  body.tv-fullscreen #headerTitles h1 {
-    margin: 0;
-
-    line-height: 1;
-
-    font-size:
-      clamp(
-        24px,
-        2.35vw,
-        42px
-      );
-  }
-
-  body.tv-fullscreen #headerButtons {
-    position: static;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-end;
-  }
-
-
-  /* ---------------- FULLSCREEN MAIN ---------------- */
-
-  body.tv-fullscreen main {
-    flex: 1;
-
-    min-height: 0;
-
-    max-width: none;
-
-    width: 100%;
-
-    height: 87vh;
-
-    display: grid;
-
-    grid-template-columns:
-      minmax(0, 1fr)
-      minmax(245px, 22vw);
-
-    gap: 0.8vw;
-
-    margin: 0;
-
-    padding:
-      0.6vh
-      0.7vw;
-
-    overflow: hidden !important;
-  }
-
-
-  /* ---------------- FULLSCREEN CASE AREA ---------------- */
-
-  body.tv-fullscreen #briefcasesSection {
-    min-width: 0;
-
-    min-height: 0;
-
-    width: 100%;
-
-    height: 100%;
-
-    margin: 0;
-
-    padding: 0;
-
-    display: flex;
-
-    flex-direction: column;
-
-    overflow: hidden !important;
-  }
-
-
-  /* ---------------- FULLSCREEN GRID ---------------- */
-
-  body.tv-fullscreen #briefcasesContainer {
-    flex: 1;
-
-    min-height: 0;
-
-    display: grid;
-
-    grid-template-columns:
-      repeat(
-        7,
-        minmax(0, 1fr)
-      );
-
-    grid-template-rows:
-      repeat(
-        3,
-        minmax(0, 1fr)
-      );
-
-    gap:
-      clamp(
-        3px,
-        0.45vw,
-        8px
-      );
-
-    width: 100%;
-
-    height: 100%;
-
-    margin: 0;
-
-    padding: 0;
-
-    overflow: hidden !important;
-  }
-
-
-  /* ---------------- FULLSCREEN CASES ---------------- */
-
-  body.tv-fullscreen
-  .briefcase:not(.center-open):not(.personal-box-reveal) {
-
-    min-width: 0;
-
-    min-height: 0;
-
-    width: 100%;
-
-    height: 100%;
-
-    margin: 0;
-
-    padding: 2px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    overflow: hidden;
-  }
-
-  body.tv-fullscreen
-  .briefcase:not(.center-open):not(.personal-box-reveal)
-  .briefcase-img {
-
-    width: 100%;
-
-    height:
-      calc(100% - 25px);
-
-    min-height: 0;
-
-    aspect-ratio: auto;
-
-    object-fit: cover;
-
-    object-position: center top;
-  }
-
-  body.tv-fullscreen
-  .briefcase:not(.center-open):not(.personal-box-reveal)
-  .briefcase-number {
-
-    width: 100%;
-
-    font-size:
-      clamp(
-        12px,
-        1.05vw,
-        20px
-      );
-
-    padding: 2px;
-  }
-
-
-  /* ---------------- PERSONAL GRID CASE ---------------- */
-
-  body.tv-fullscreen .briefcase.personal {
-    border:
-      5px solid #ffd700 !important;
-
-    transform:
-      scale(1.04) !important;
-
-    z-index: 20;
-
-    animation:
-      pulseHighlight
-      1.3s
-      infinite;
-  }
-
-
-  /* ---------------- GAME MESSAGE ---------------- */
-
-  body.tv-fullscreen #briefcasesInfo {
-    flex:
-      0 0 5.5vh;
-
-    height: 5.5vh;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin: 0;
-
-    padding: 0;
-  }
-
-  body.tv-fullscreen #gameMessage {
-    font-size:
-      clamp(
-        20px,
-        1.7vw,
-        30px
-      );
-
-    font-weight: 800;
-
-    color: #ffd700;
-  }
-
-
-  /* ---------------- PRIZES ---------------- */
-
-  body.tv-fullscreen #prizesSection {
-    min-width: 0;
-
-    min-height: 0;
-
-    height: 100%;
-
-    margin: 0;
-
-    padding:
-      0.5vh
-      0.6vw;
-
-    border-left:
-      3px solid #d4af37;
-
-    overflow: hidden !important;
-  }
-
-  body.tv-fullscreen #prizesSection h2 {
-    font-size:
-      clamp(
-        20px,
-        1.7vw,
-        30px
-      );
-
-    margin:
-      0.5vh
-      0
-      0.8vh;
-
-    color: #ffd700;
-
-    font-weight: 900;
-
-    text-shadow:
-      0 0 10px
-      rgba(255, 215, 0, 0.8);
-  }
-
-  body.tv-fullscreen #prizeBoard {
-    display: grid;
-
-    grid-template-columns:
-      1fr
-      1fr;
-
-    gap:
-      0.1vh
-      0.7vw;
-  }
-
-  body.tv-fullscreen #prizeBoard li {
-    font-size:
-      clamp(
-        14px,
-        1.15vw,
-        21px
-      );
-
-    line-height: 1.15;
-
-    font-weight: 700;
-
-    margin:
-      0.18vh
-      0;
-
-    color: #ffd700;
-  }
-
-  body.tv-fullscreen #prizeBoard li.eliminated {
-    color: #666;
-  }
-
-  body.tv-fullscreen #offersHistory li {
-    font-size:
-      clamp(
-        12px,
-        0.95vw,
-        18px
-      );
-
-    line-height: 1.15;
-
-    margin:
-      0.2vh
-      0;
-  }
-
-
-  /* ---------------- FULLSCREEN MODAL ---------------- */
-
-  body.tv-fullscreen .modal-content {
-    max-width: 55vw;
-
-    max-height: 75vh;
-
-    padding:
-      clamp(
-        15px,
-        2vw,
-        35px
-      );
-  }
-}
-
-
-/* ======================================================
-   CENTERED REVEAL
-   DESKTOP AND PHONE
-   ====================================================== */
+/* ==========================================================
+   CENTERED CASE REVEAL
+   ========================================================== */
 
 body > .center-open,
 body > .personal-box-reveal,
 body.tv-fullscreen > .center-open,
 body.tv-fullscreen > .personal-box-reveal {
-
   position: fixed !important;
 
   inset: 0 !important;
@@ -1474,27 +1747,22 @@ body.tv-fullscreen > .personal-box-reveal {
   rotate: none !important;
 
   width: 100vw !important;
-
   height: 100vh !important;
 
   max-width: none !important;
-
   max-height: none !important;
 
   min-width: 0 !important;
-
   min-height: 0 !important;
 
   margin: 0 !important;
-
   padding: 0 !important;
 
   border: 0 !important;
-
   border-radius: 0 !important;
 
   background:
-    rgba(0, 0, 0, 0.70) !important;
+    rgba(0, 0, 0, 0.76) !important;
 
   box-shadow: none !important;
 
@@ -1505,7 +1773,6 @@ body.tv-fullscreen > .personal-box-reveal {
   flex-direction: column !important;
 
   justify-content: center !important;
-
   align-items: center !important;
 
   text-align: center !important;
@@ -1517,49 +1784,37 @@ body.tv-fullscreen > .personal-box-reveal {
   cursor: default !important;
 
   transition: none !important;
-
   animation: none !important;
 
   z-index: 15000 !important;
 }
 
-
-/* ======================================================
-   NO REVEAL MOVEMENT ON HOVER
-   ====================================================== */
-
 body > .center-open:hover,
 body > .personal-box-reveal:hover,
 body.tv-fullscreen > .center-open:hover,
 body.tv-fullscreen > .personal-box-reveal:hover {
-
   transform: none !important;
 
   translate: none !important;
-
   scale: none !important;
-
   rotate: none !important;
 
   animation: none !important;
-
   transition: none !important;
 }
 
 
-/* ======================================================
+/* ==========================================================
    CENTER REVEAL PHOTO
-   ====================================================== */
+   ========================================================== */
 
 body > .center-open > .center-img,
 body.tv-fullscreen > .center-open > .center-img {
-
   position: static !important;
 
   display: block !important;
 
   width: auto !important;
-
   height: auto !important;
 
   max-width:
@@ -1572,7 +1827,8 @@ body.tv-fullscreen > .center-open > .center-img {
     62vh !important;
 
   margin:
-    0 auto !important;
+    0
+    auto !important;
 
   padding: 0 !important;
 
@@ -1590,8 +1846,7 @@ body.tv-fullscreen > .center-open > .center-img {
 
   box-shadow:
     0 0 20px #ffd700,
-    0 0 45px
-    rgba(255, 215, 0, 0.75) !important;
+    0 0 45px rgba(255, 215, 0, 0.75) !important;
 
   transform: none !important;
 
@@ -1599,15 +1854,13 @@ body.tv-fullscreen > .center-open > .center-img {
 }
 
 
-/* ======================================================
+/* ==========================================================
    PERSONAL BOX REVEAL
-   ====================================================== */
+   ========================================================== */
 
 body > .personal-box-reveal > .center-img,
 body.tv-fullscreen > .personal-box-reveal > .center-img {
-
   width: auto !important;
-
   height: auto !important;
 
   max-width:
@@ -1620,7 +1873,8 @@ body.tv-fullscreen > .personal-box-reveal > .center-img {
     65vh !important;
 
   margin:
-    0 auto !important;
+    0
+    auto !important;
 
   object-fit:
     contain !important;
@@ -1634,8 +1888,7 @@ body.tv-fullscreen > .personal-box-reveal > .center-img {
   box-shadow:
     0 0 25px #ffd700,
     0 0 55px #ffd700,
-    0 0 75px
-    rgba(255, 215, 0, 0.55) !important;
+    0 0 75px rgba(255, 215, 0, 0.55) !important;
 
   transform: none !important;
 
@@ -1643,13 +1896,12 @@ body.tv-fullscreen > .personal-box-reveal > .center-img {
 }
 
 
-/* ======================================================
+/* ==========================================================
    REVEAL AMOUNT
-   ====================================================== */
+   ========================================================== */
 
 body > .center-open > .center-amount,
 body > .personal-box-reveal > .center-amount {
-
   display: block !important;
 
   width: auto !important;
@@ -1679,21 +1931,22 @@ body > .personal-box-reveal > .center-amount {
       42px
     ) !important;
 
-  line-height: 1 !important;
+  line-height:
+    1 !important;
 
-  font-weight: 900 !important;
+  font-weight:
+    900 !important;
 
   white-space:
     nowrap !important;
 }
 
 
-/* ======================================================
+/* ==========================================================
    THIS IS YOUR BOX
-   ====================================================== */
+   ========================================================== */
 
 body > .personal-box-reveal > .personal-box-message {
-
   display: block !important;
 
   width: auto !important;
@@ -1703,7 +1956,8 @@ body > .personal-box-reveal > .personal-box-message {
     auto
     3px !important;
 
-  padding: 0 !important;
+  padding:
+    0 !important;
 
   color:
     #ffd700 !important;
@@ -1715,9 +1969,11 @@ body > .personal-box-reveal > .personal-box-message {
       56px
     ) !important;
 
-  line-height: 1 !important;
+  line-height:
+    1 !important;
 
-  font-weight: 900 !important;
+  font-weight:
+    900 !important;
 
   text-align:
     center !important;
@@ -1731,13 +1987,662 @@ body > .personal-box-reveal > .personal-box-message {
 }
 
 
-/* ======================================================
-   PHONE
-   IMPORTANT: THESE RULES COME AFTER FULLSCREEN
-   SO THE PHONE ALWAYS USES THE MOBILE LAYOUT.
-   ====================================================== */
+/* ==========================================================
+   DESKTOP / TV FULLSCREEN
+   ========================================================== */
 
-@media (max-width: 430px) {
+@media (min-width: 769px) {
+
+  html:fullscreen,
+  html:fullscreen body {
+    width: 100vw;
+
+    height: 100vh;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow:
+      hidden !important;
+
+    background: #000;
+  }
+
+
+  body.tv-fullscreen {
+    width: 100vw;
+
+    height: 100vh;
+
+    max-height: 100vh;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow:
+      hidden !important;
+
+    background: #000;
+
+    display: grid;
+
+    grid-template-rows:
+      18vh
+      minmax(0, 1fr)
+      6vh;
+  }
+
+
+  /* ---------------- HEADER ---------------- */
+
+  body.tv-fullscreen #birthdayHeader {
+    width: 100%;
+
+    height: 18vh;
+
+    min-height: 0;
+
+    margin: 0;
+
+    padding:
+      0.5vh
+      0.7vw;
+
+    overflow: visible;
+  }
+
+  body.tv-fullscreen #headerContent {
+    width: 100%;
+
+    height:
+      calc(100% - 5px);
+
+    min-height: 0;
+
+    display: grid;
+
+    grid-template-columns:
+      minmax(100px, 0.75fr)
+      minmax(100px, 8vw)
+      minmax(360px, 3fr)
+      minmax(100px, 0.75fr)
+      minmax(110px, 9vw);
+
+    gap:
+      0.7vw;
+
+    align-items: center;
+  }
+
+  body.tv-fullscreen #birthdayPhotoFrame {
+    padding:
+      0.3vh;
+
+    border-width:
+      3px;
+  }
+
+  body.tv-fullscreen #headerPhoto {
+    width: auto;
+
+    height: 13vh;
+
+    max-width: 9vw;
+
+    margin: 0;
+
+    object-fit: cover;
+  }
+
+  body.tv-fullscreen #headerTitles {
+    width: 100%;
+  }
+
+  body.tv-fullscreen #gameTitle {
+    margin: 0;
+
+    padding:
+      0
+      8px;
+
+    font-size:
+      clamp(
+        24px,
+        2.55vw,
+        48px
+      );
+
+    line-height: 1;
+  }
+
+  body.tv-fullscreen #birthdayEdition {
+    margin-top:
+      0.5vh;
+
+    font-size:
+      clamp(
+        20px,
+        2vw,
+        38px
+      );
+  }
+
+  body.tv-fullscreen .birthdaySideMessage {
+    min-height: 0;
+
+    height: 12vh;
+
+    padding:
+      0.4vh
+      0.4vw;
+
+    font-size:
+      clamp(
+        9px,
+        0.85vw,
+        16px
+      );
+  }
+
+  body.tv-fullscreen #headerButtons {
+    position: static;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap:
+      0.5vh;
+  }
+
+  body.tv-fullscreen #fullScreenBtn,
+  body.tv-fullscreen #watchIntroBtn {
+    width: 100%;
+
+    margin: 0;
+
+    padding:
+      0.6vh
+      0.5vw;
+
+    font-size:
+      clamp(
+        9px,
+        0.72vw,
+        13px
+      );
+  }
+
+
+  /* ---------------- MAIN ---------------- */
+
+  body.tv-fullscreen main,
+  body.tv-fullscreen #gameArea {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+
+    max-width: none;
+
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(220px, 18vw);
+
+    gap:
+      0.65vw;
+
+    margin: 0;
+
+    padding:
+      1.5vh
+      0.65vw
+      0.5vh;
+
+    overflow:
+      hidden !important;
+  }
+
+
+  /* ---------------- CASE SECTION ---------------- */
+
+  body.tv-fullscreen #briefcasesSection {
+    min-width: 0;
+
+    min-height: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    margin: 0;
+
+    padding:
+      1.5vh
+      0.45vw
+      0.4vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow:
+      hidden !important;
+  }
+
+
+  /* ---------------- GRID ---------------- */
+
+  body.tv-fullscreen #briefcasesContainer {
+    flex: 1;
+
+    min-height: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        7,
+        minmax(0, 1fr)
+      );
+
+    grid-template-rows:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap:
+      2vh
+      0.5vw;
+
+    margin: 0;
+
+    padding:
+      1.2vh
+      0
+      0;
+
+    overflow:
+      visible !important;
+  }
+
+
+  /* ---------------- CASES ---------------- */
+
+  body.tv-fullscreen
+  .briefcase:not(.center-open):not(.personal-box-reveal) {
+    min-width: 0;
+
+    min-height: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    margin: 0;
+
+    padding:
+      0.35vh
+      0.25vw;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    overflow: visible;
+  }
+
+  body.tv-fullscreen
+  .briefcase:not(.center-open):not(.personal-box-reveal)
+  .briefcase-img {
+    width: 100%;
+
+    height:
+      calc(100% - 3.2vh);
+
+    min-height: 0;
+
+    aspect-ratio: auto;
+
+    object-fit: cover;
+
+    object-position:
+      center top;
+  }
+
+  body.tv-fullscreen
+  .briefcase:not(.center-open):not(.personal-box-reveal)
+  .briefcase-number {
+    flex:
+      0 0 2.7vh;
+
+    width: 100%;
+
+    height: 2.7vh;
+
+    margin-top:
+      0.3vh;
+
+    padding:
+      0.2vh
+      0.2vw;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size:
+      clamp(
+        11px,
+        0.95vw,
+        18px
+      );
+  }
+
+  body.tv-fullscreen .briefcase.personal {
+    border:
+      4px solid #ffd700 !important;
+
+    transform:
+      scale(1.03) !important;
+
+    z-index: 20;
+  }
+
+
+  /* ---------------- GAME MESSAGE ---------------- */
+
+  body.tv-fullscreen #briefcasesInfo {
+    flex:
+      0 0 4vh;
+
+    height: 4vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0;
+
+    padding:
+      0.4vh
+      0;
+  }
+
+  body.tv-fullscreen #gameMessage {
+    font-size:
+      clamp(
+        17px,
+        1.45vw,
+        27px
+      );
+  }
+
+
+  /* ---------------- PRIZES ---------------- */
+
+  body.tv-fullscreen #prizesSection {
+    min-width: 0;
+
+    min-height: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    margin: 0;
+
+    padding:
+      0.6vh
+      0.6vw;
+
+    overflow:
+      hidden !important;
+  }
+
+  body.tv-fullscreen .prizeBoardHeader {
+    margin-bottom:
+      0.5vh;
+
+    padding:
+      0.5vh
+      0.2vw;
+  }
+
+  body.tv-fullscreen #prizesSection h2 {
+    margin:
+      0.3vh
+      0;
+
+    font-size:
+      clamp(
+        17px,
+        1.45vw,
+        27px
+      );
+  }
+
+  body.tv-fullscreen #prizeBoard {
+    display: grid;
+
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap:
+      0
+      0.5vw;
+
+    margin:
+      0
+      0
+      0.5vh;
+
+    padding:
+      0.2vh
+      0.2vw;
+  }
+
+  body.tv-fullscreen #prizeBoard li {
+    margin:
+      0.15vh
+      0;
+
+    font-size:
+      clamp(
+        11px,
+        0.9vw,
+        17px
+      );
+
+    line-height: 1.08;
+  }
+
+  body.tv-fullscreen #previousOffersSection {
+    min-height: 0;
+
+    margin-top:
+      0.5vh;
+
+    padding-top:
+      0.7vh;
+  }
+
+  body.tv-fullscreen #previousOffersSection h2 {
+    font-size:
+      clamp(
+        15px,
+        1.2vw,
+        22px
+      );
+  }
+
+  body.tv-fullscreen #offersHistory li {
+    margin:
+      0.1vh
+      0;
+
+    font-size:
+      clamp(
+        10px,
+        0.75vw,
+        14px
+      );
+
+    line-height: 1.1;
+  }
+
+
+  /* ---------------- FOOTER ---------------- */
+
+  body.tv-fullscreen #birthdayFooter {
+    width: 100%;
+
+    height: 6vh;
+
+    max-width: none;
+
+    margin: 0;
+
+    padding:
+      0.3vh
+      0.7vw;
+
+    grid-template-columns:
+      minmax(120px, 11vw)
+      1fr
+      minmax(120px, 11vw);
+
+    overflow: hidden;
+  }
+
+  body.tv-fullscreen #birthdayFooterText {
+    font-size:
+      clamp(
+        21px,
+        2.2vw,
+        42px
+      );
+  }
+
+  body.tv-fullscreen .birthdayFooterSide {
+    min-height: 0;
+
+    height: 4.7vh;
+
+    padding:
+      0.2vh
+      0.3vw;
+
+    font-size:
+      clamp(
+        8px,
+        0.65vw,
+        12px
+      );
+  }
+
+  body.tv-fullscreen .footerHeart,
+  body.tv-fullscreen .footerSparkle {
+    font-size:
+      clamp(
+        15px,
+        1.5vw,
+        28px
+      );
+  }
+
+
+  /* ---------------- FULLSCREEN MODAL ---------------- */
+
+  body.tv-fullscreen .modal-content {
+    max-width: 55vw;
+
+    max-height: 75vh;
+
+    padding:
+      clamp(
+        15px,
+        2vw,
+        35px
+      );
+  }
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 1200px) and (min-width: 769px) {
+
+  #headerContent {
+    grid-template-columns:
+      110px
+      125px
+      minmax(320px, 1fr)
+      120px;
+
+    gap: 8px;
+  }
+
+  .birthdaySideRight {
+    display: none;
+  }
+
+  #headerButtons {
+    width: 120px;
+  }
+
+  #gameTitle {
+    font-size:
+      clamp(
+        1.8rem,
+        3vw,
+        2.8rem
+      );
+  }
+
+  main,
+  #gameArea {
+    grid-template-columns:
+      minmax(0, 1fr)
+      210px;
+  }
+
+  #briefcasesContainer {
+    gap:
+      17px
+      5px;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE / PHONE
+   ========================================================== */
+
+@media (max-width: 768px) {
 
   html,
   html:fullscreen {
@@ -1747,11 +2652,14 @@ body > .personal-box-reveal > .personal-box-message {
 
     min-height: 100% !important;
 
-    overflow-x: hidden !important;
+    overflow-x:
+      hidden !important;
 
-    overflow-y: auto !important;
+    overflow-y:
+      auto !important;
 
-    background: #000 !important;
+    background:
+      #000 !important;
   }
 
   body,
@@ -1762,79 +2670,180 @@ body > .personal-box-reveal > .personal-box-message {
 
     max-height: none !important;
 
-    min-height: 100vh !important;
+    min-height:
+      100vh !important;
 
-    margin: 0 !important;
+    margin:
+      0 !important;
 
-    padding: 3px !important;
+    padding:
+      3px !important;
 
-    display: block !important;
+    display:
+      block !important;
 
-    overflow-x: hidden !important;
+    overflow-x:
+      hidden !important;
 
-    overflow-y: auto !important;
+    overflow-y:
+      auto !important;
 
-    background: #000 !important;
+    background:
+      #000 !important;
   }
 
 
   /* ---------------- PHONE HEADER ---------------- */
 
-  header,
-  body.tv-fullscreen header {
-    width: 100% !important;
+  #birthdayHeader,
+  body.tv-fullscreen #birthdayHeader {
+    width:
+      100% !important;
 
-    height: auto !important;
+    height:
+      auto !important;
 
-    min-height: 0 !important;
+    min-height:
+      0 !important;
 
-    margin-bottom: 4px !important;
+    margin-bottom:
+      5px !important;
 
-    padding-bottom: 4px !important;
+    padding:
+      6px
+      4px !important;
   }
 
   #headerContent,
   body.tv-fullscreen #headerContent {
-    width: 100% !important;
+    width:
+      100% !important;
 
-    height: auto !important;
+    height:
+      auto !important;
 
-    display: flex !important;
+    min-height:
+      0 !important;
 
-    flex-direction: column !important;
+    display:
+      flex !important;
 
-    flex-wrap: nowrap !important;
+    flex-direction:
+      column !important;
 
-    align-items: center !important;
+    flex-wrap:
+      nowrap !important;
 
-    justify-content: center !important;
+    align-items:
+      center !important;
+
+    justify-content:
+      center !important;
+
+    gap:
+      5px !important;
+  }
+
+
+  /* hide side signs on phone */
+
+  .birthdaySideMessage {
+    display:
+      none !important;
+  }
+
+
+  /* birthday person */
+
+  #birthdayPerson {
+    order: 1;
+  }
+
+  #birthdayPhotoFrame {
+    padding:
+      3px;
+
+    border-width:
+      2px;
   }
 
   #headerPhoto,
   body.tv-fullscreen #headerPhoto {
-    width: 65px !important;
+    width:
+      92px !important;
 
-    height: auto !important;
+    height:
+      92px !important;
 
-    max-width: none !important;
+    max-width:
+      none !important;
 
-    margin: 3px !important;
+    margin:
+      0 !important;
 
-    border-width: 3px !important;
+    border-width:
+      0 !important;
   }
+
+
+  /* title */
 
   #headerTitles,
   body.tv-fullscreen #headerTitles {
-    width: 100% !important;
+    order: 2;
+
+    width:
+      100% !important;
   }
 
-  h1,
-  body.tv-fullscreen #headerTitles h1 {
-    font-size: 1.3em !important;
+  #gameTitle,
+  body.tv-fullscreen #gameTitle {
+    display:
+      flex !important;
 
-    margin: 1px 0 !important;
+    flex-wrap:
+      wrap !important;
 
-    line-height: 1.05 !important;
+    justify-content:
+      center !important;
+
+    align-items:
+      center !important;
+
+    gap:
+      5px !important;
+
+    width:
+      100% !important;
+
+    margin:
+      0 !important;
+
+    padding:
+      2px !important;
+
+    font-size:
+      clamp(
+        1.4rem,
+        7vw,
+        2rem
+      ) !important;
+
+    line-height:
+      1 !important;
+  }
+
+  #birthdayEdition,
+  body.tv-fullscreen #birthdayEdition {
+    margin-top:
+      3px !important;
+
+    font-size:
+      clamp(
+        1.35rem,
+        6.5vw,
+        2rem
+      ) !important;
   }
 
 
@@ -1842,64 +2851,95 @@ body > .personal-box-reveal > .personal-box-message {
 
   #headerButtons,
   body.tv-fullscreen #headerButtons {
-    position: static !important;
+    order: 3;
 
-    width: 100% !important;
+    position:
+      static !important;
 
-    display: flex !important;
+    width:
+      100% !important;
 
-    flex-direction: row !important;
+    display:
+      flex !important;
 
-    flex-wrap: wrap !important;
+    flex-direction:
+      row !important;
 
-    justify-content: center !important;
+    flex-wrap:
+      wrap !important;
 
-    align-items: center !important;
+    justify-content:
+      center !important;
 
-    gap: 3px !important;
+    align-items:
+      center !important;
 
-    margin: 3px 0 !important;
+    gap:
+      4px !important;
+
+    margin:
+      3px
+      0 !important;
   }
 
   #fullScreenBtn,
   #watchIntroBtn {
-    font-size: 0.75em !important;
+    width:
+      auto !important;
+
+    font-size:
+      0.72em !important;
 
     padding:
       5px
       8px !important;
 
-    margin: 2px !important;
+    margin:
+      2px !important;
   }
 
 
   /* ---------------- PHONE MAIN ---------------- */
 
   main,
-  body.tv-fullscreen main {
-    width: 100% !important;
+  #gameArea,
+  body.tv-fullscreen main,
+  body.tv-fullscreen #gameArea {
+    width:
+      100% !important;
 
-    height: auto !important;
+    height:
+      auto !important;
 
-    min-height: 0 !important;
+    min-height:
+      0 !important;
 
-    max-width: none !important;
+    max-width:
+      none !important;
 
-    display: flex !important;
+    display:
+      flex !important;
 
-    flex-direction: column !important;
+    flex-direction:
+      column !important;
 
-    align-items: center !important;
+    align-items:
+      center !important;
 
-    gap: 0 !important;
+    gap:
+      0 !important;
 
-    margin: 0 !important;
+    margin:
+      0 !important;
 
-    padding: 0 !important;
+    padding:
+      0 !important;
 
-    overflow: visible !important;
+    overflow:
+      visible !important;
 
-    background: #000 !important;
+    background:
+      #000 !important;
   }
 
 
@@ -1907,33 +2947,46 @@ body > .personal-box-reveal > .personal-box-message {
 
   #briefcasesSection,
   body.tv-fullscreen #briefcasesSection {
-    width: 100% !important;
+    width:
+      100% !important;
 
-    height: auto !important;
+    height:
+      auto !important;
 
-    min-height: 0 !important;
+    min-height:
+      0 !important;
 
-    margin: 0 !important;
+    margin:
+      0 !important;
 
-    padding: 4px !important;
+    padding:
+      14px
+      4px
+      4px !important;
 
-    overflow: visible !important;
+    overflow:
+      visible !important;
 
-    background: #000 !important;
+    background:
+      #050505 !important;
   }
 
 
-  /* ---------------- PHONE 3-COLUMN GRID ---------------- */
+  /* ---------------- PHONE 3 COLUMN GRID ---------------- */
 
   #briefcasesContainer,
   body.tv-fullscreen #briefcasesContainer {
-    width: 100% !important;
+    width:
+      100% !important;
 
-    height: auto !important;
+    height:
+      auto !important;
 
-    min-height: 0 !important;
+    min-height:
+      0 !important;
 
-    display: grid !important;
+    display:
+      grid !important;
 
     grid-template-columns:
       repeat(
@@ -1941,21 +2994,30 @@ body > .personal-box-reveal > .personal-box-message {
         minmax(0, 1fr)
       ) !important;
 
-    grid-template-rows: none !important;
+    grid-template-rows:
+      none !important;
 
-    grid-auto-rows: auto !important;
+    grid-auto-rows:
+      auto !important;
 
-    justify-content: center !important;
+    justify-content:
+      center !important;
 
-    align-items: start !important;
+    align-items:
+      start !important;
 
-    gap: 4px !important;
+    gap:
+      18px
+      4px !important;
 
-    margin: 0 !important;
+    margin:
+      0 !important;
 
-    padding: 0 !important;
+    padding:
+      0 !important;
 
-    overflow: visible !important;
+    overflow:
+      visible !important;
   }
 
 
@@ -1964,38 +3026,71 @@ body > .personal-box-reveal > .personal-box-message {
   .briefcase,
   body.tv-fullscreen
   .briefcase:not(.center-open):not(.personal-box-reveal) {
+    width:
+      100% !important;
 
-    width: 100% !important;
+    height:
+      auto !important;
 
-    height: auto !important;
+    min-width:
+      0 !important;
 
-    min-width: 0 !important;
+    min-height:
+      0 !important;
 
-    min-height: 0 !important;
+    margin:
+      0 !important;
 
-    margin: 0 !important;
+    padding:
+      2px !important;
 
-    padding: 1px !important;
+    border-width:
+      1px !important;
 
-    border-width: 1px !important;
+    border-radius:
+      6px !important;
+  }
 
-    border-radius: 6px !important;
+  .briefcase::before {
+    top:
+      -11px;
+
+    height:
+      11px;
+
+    border-width:
+      3px;
+
+    border-bottom:
+      0;
+  }
+
+  .briefcase::after {
+    top:
+      -6px;
+
+    height:
+      5px;
   }
 
   .briefcase-img,
   body.tv-fullscreen
   .briefcase:not(.center-open):not(.personal-box-reveal)
   .briefcase-img {
+    display:
+      block !important;
 
-    display: block !important;
+    width:
+      100% !important;
 
-    width: 100% !important;
+    height:
+      auto !important;
 
-    height: auto !important;
+    aspect-ratio:
+      4 / 5 !important;
 
-    aspect-ratio: 2 / 3 !important;
-
-    object-fit: cover !important;
+    object-fit:
+      cover !important;
 
     object-position:
       center top !important;
@@ -2005,18 +3100,23 @@ body > .personal-box-reveal > .personal-box-message {
   body.tv-fullscreen
   .briefcase:not(.center-open):not(.personal-box-reveal)
   .briefcase-number {
+    width:
+      100% !important;
 
-    width: 100% !important;
+    height:
+      auto !important;
 
-    height: auto !important;
+    font-size:
+      0.72em !important;
 
-    font-size: 0.72em !important;
+    line-height:
+      1 !important;
 
-    line-height: 1 !important;
+    padding:
+      3px !important;
 
-    padding: 2px !important;
-
-    margin-top: 1px !important;
+    margin-top:
+      2px !important;
   }
 
 
@@ -2024,14 +3124,14 @@ body > .personal-box-reveal > .personal-box-message {
 
   .briefcase.personal,
   body.tv-fullscreen .briefcase.personal {
-
     border:
       3px solid #ffd700 !important;
 
     transform:
-      scale(1.03) !important;
+      scale(1.02) !important;
 
-    z-index: 20;
+    z-index:
+      20;
   }
 
 
@@ -2039,30 +3139,40 @@ body > .personal-box-reveal > .personal-box-message {
 
   #briefcasesInfo,
   body.tv-fullscreen #briefcasesInfo {
+    width:
+      100% !important;
 
-    width: 100% !important;
+    height:
+      auto !important;
 
-    height: auto !important;
+    min-height:
+      0 !important;
 
-    min-height: 0 !important;
+    display:
+      block !important;
 
-    display: block !important;
+    margin-top:
+      7px !important;
 
-    margin-top: 6px !important;
+    padding:
+      4px
+      0 !important;
 
-    padding: 3px 0 !important;
-
-    overflow: visible !important;
+    overflow:
+      visible !important;
   }
 
   #gameMessage,
   body.tv-fullscreen #gameMessage {
+    font-size:
+      1.05em !important;
 
-    font-size: 1em !important;
+    line-height:
+      1.15 !important;
 
-    line-height: 1.15 !important;
-
-    padding: 0 4px !important;
+    padding:
+      0
+      4px !important;
   }
 
 
@@ -2070,34 +3180,34 @@ body > .personal-box-reveal > .personal-box-message {
 
   #prizesSection,
   body.tv-fullscreen #prizesSection {
+    width:
+      100% !important;
 
-    width: 100% !important;
+    height:
+      auto !important;
 
-    height: auto !important;
+    min-height:
+      0 !important;
 
-    min-height: 0 !important;
+    max-width:
+      none !important;
 
-    max-width: none !important;
-
-    margin-top: 8px !important;
+    margin-top:
+      8px !important;
 
     padding:
       8px
-      3px
+      5px
       15px !important;
 
-    border-left: none !important;
-
-    border-top:
-      2px solid #d4af37 !important;
-
-    overflow: visible !important;
+    overflow:
+      visible !important;
   }
 
   #prizesSection h2,
   body.tv-fullscreen #prizesSection h2 {
-
-    font-size: 1.25em !important;
+    font-size:
+      1.2em !important;
 
     margin:
       6px
@@ -2106,8 +3216,8 @@ body > .personal-box-reveal > .personal-box-message {
 
   #prizeBoard,
   body.tv-fullscreen #prizeBoard {
-
-    display: grid !important;
+    display:
+      grid !important;
 
     grid-template-columns:
       1fr
@@ -2120,26 +3230,76 @@ body > .personal-box-reveal > .personal-box-message {
 
   #prizeBoard li,
   body.tv-fullscreen #prizeBoard li {
+    font-size:
+      0.86em !important;
 
-    font-size: 0.88em !important;
+    line-height:
+      1.15 !important;
 
-    line-height: 1.15 !important;
-
-    margin: 2px 0 !important;
+    margin:
+      2px
+      0 !important;
   }
 
   #offersHistory,
   body.tv-fullscreen #offersHistory {
+    width:
+      100% !important;
 
-    width: 100% !important;
-
-    height: auto !important;
+    height:
+      auto !important;
   }
 
   #offersHistory li,
   body.tv-fullscreen #offersHistory li {
+    font-size:
+      0.83em !important;
+  }
 
-    font-size: 0.85em !important;
+
+  /* ---------------- PHONE FOOTER ---------------- */
+
+  #birthdayFooter,
+  body.tv-fullscreen #birthdayFooter {
+    width:
+      100% !important;
+
+    height:
+      auto !important;
+
+    display:
+      block !important;
+
+    margin:
+      7px
+      0
+      0 !important;
+
+    padding:
+      8px
+      4px !important;
+  }
+
+  .birthdayFooterSide {
+    display:
+      none !important;
+  }
+
+  #birthdayFooterCenter {
+    width:
+      100% !important;
+
+    gap:
+      7px !important;
+  }
+
+  #birthdayFooterText {
+    font-size:
+      clamp(
+        1.5rem,
+        8vw,
+        2.4rem
+      ) !important;
   }
 
 
@@ -2147,20 +3307,23 @@ body > .personal-box-reveal > .personal-box-message {
 
   .modal,
   body.tv-fullscreen .modal {
+    width:
+      100vw !important;
 
-    width: 100vw !important;
-
-    height: 100vh !important;
+    height:
+      100vh !important;
   }
 
   .modal-content,
   body.tv-fullscreen .modal-content {
+    width:
+      92% !important;
 
-    width: 92% !important;
+    max-width:
+      92% !important;
 
-    max-width: 92% !important;
-
-    max-height: 85vh !important;
+    max-height:
+      85vh !important;
 
     padding:
       15px
@@ -2168,7 +3331,6 @@ body > .personal-box-reveal > .personal-box-message {
   }
 
   .cases-to-open {
-
     font-size:
       clamp(
         22px,
@@ -2178,7 +3340,6 @@ body > .personal-box-reveal > .personal-box-message {
   }
 
   .bank-offer {
-
     font-size:
       clamp(
         28px,
@@ -2188,58 +3349,71 @@ body > .personal-box-reveal > .personal-box-message {
   }
 
 
-  /* ---------------- PHONE BIG REVEAL ---------------- */
+  /* ---------------- PHONE REVEAL ---------------- */
 
   body > .center-open,
   body > .personal-box-reveal,
   body.tv-fullscreen > .center-open,
   body.tv-fullscreen > .personal-box-reveal {
+    width:
+      100vw !important;
 
-    width: 100vw !important;
+    height:
+      100vh !important;
 
-    height: 100vh !important;
+    position:
+      fixed !important;
 
-    position: fixed !important;
+    inset:
+      0 !important;
 
-    inset: 0 !important;
+    display:
+      flex !important;
 
-    display: flex !important;
+    flex-direction:
+      column !important;
 
-    flex-direction: column !important;
+    justify-content:
+      center !important;
 
-    justify-content: center !important;
+    align-items:
+      center !important;
 
-    align-items: center !important;
-
-    overflow: hidden !important;
+    overflow:
+      hidden !important;
   }
 
   body > .center-open > .center-img,
   body.tv-fullscreen > .center-open > .center-img {
+    width:
+      auto !important;
 
-    width: auto !important;
+    height:
+      auto !important;
 
-    height: auto !important;
+    max-width:
+      72vw !important;
 
-    max-width: 72vw !important;
-
-    max-height: 58vh !important;
+    max-height:
+      58vh !important;
   }
 
   body > .personal-box-reveal > .center-img,
   body.tv-fullscreen > .personal-box-reveal > .center-img {
+    width:
+      auto !important;
 
-    width: auto !important;
+    height:
+      auto !important;
 
-    height: auto !important;
+    max-width:
+      75vw !important;
 
-    max-width: 75vw !important;
-
-    max-height: 58vh !important;
+    max-height:
+      58vh !important;
   }
 
   body > .personal-box-reveal > .personal-box-message {
-
     font-size:
       clamp(
         22px,
@@ -2247,7 +3421,8 @@ body > .personal-box-reveal > .personal-box-message {
         32px
       ) !important;
 
-    white-space: normal !important;
+    white-space:
+      normal !important;
 
     padding:
       0
@@ -2256,7 +3431,6 @@ body > .personal-box-reveal > .personal-box-message {
 
   body > .center-open > .center-amount,
   body > .personal-box-reveal > .center-amount {
-
     font-size:
       clamp(
         20px,
@@ -2273,78 +3447,95 @@ body > .personal-box-reveal > .personal-box-message {
   /* ---------------- PHONE INTRO ---------------- */
 
   #introVideoContainer {
+    width:
+      100vw !important;
 
-    width: 100vw !important;
-
-    height: 100vh !important;
+    height:
+      100vh !important;
   }
 
   #introVideo {
+    width:
+      100% !important;
 
-    width: 100% !important;
+    height:
+      100% !important;
 
-    height: 100% !important;
+    object-fit:
+      contain !important;
 
-    object-fit: contain !important;
-
-    background: #000 !important;
+    background:
+      #000 !important;
   }
 
   #introButtons {
+    bottom:
+      20px !important;
 
-    bottom: 20px !important;
+    width:
+      96% !important;
 
-    width: 96% !important;
+    gap:
+      5px !important;
 
-    gap: 5px !important;
-
-    flex-wrap: wrap !important;
+    flex-wrap:
+      wrap !important;
   }
 
   #introButtons button {
-
-    font-size: 0.8em !important;
+    font-size:
+      0.8em !important;
 
     padding:
       7px
       9px !important;
 
-    margin: 2px !important;
+    margin:
+      2px !important;
   }
 }
 
 
-/* ======================================================
+/* ==========================================================
    VERY SMALL PHONES
-   ====================================================== */
+   ========================================================== */
 
 @media (max-width: 350px) {
 
+  #headerPhoto {
+    width:
+      80px !important;
+
+    height:
+      80px !important;
+  }
+
+  #gameTitle,
+  body.tv-fullscreen #gameTitle {
+    font-size:
+      1.25rem !important;
+  }
+
+  #birthdayEdition {
+    font-size:
+      1.3rem !important;
+  }
+
   #briefcasesContainer,
   body.tv-fullscreen #briefcasesContainer {
-
     grid-template-columns:
       repeat(
         3,
         minmax(0, 1fr)
       ) !important;
 
-    gap: 3px !important;
+    gap:
+      16px
+      3px !important;
   }
 
   .briefcase-number {
-
-    font-size: 0.66em !important;
-  }
-
-  #headerPhoto {
-
-    width: 58px !important;
-  }
-
-  h1,
-  body.tv-fullscreen #headerTitles h1 {
-
-    font-size: 1.15em !important;
+    font-size:
+      0.66em !important;
   }
 }

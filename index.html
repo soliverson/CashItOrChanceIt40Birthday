@@ -10,12 +10,12 @@
   >
 
   <title>
-    Cash It or Chance It | 40th Birthday Edition | MadeToPlayGames
+    Cash It or Chance It | 50th Birthday Edition | Made2PlayGames
   </title>
 
   <meta
     name="description"
-    content="Cash It or Chance It - a personalized interactive 40th birthday party game by MadeToPlayGames."
+    content="Cash It or Chance It - 50th Birthday Edition. A personalized interactive party game by Made2PlayGames."
   >
 
   <link
@@ -32,7 +32,7 @@
 </head>
 
 
-<body>
+<body class="birthday-50-edition">
 
 
   <!-- =====================================================
@@ -77,7 +77,7 @@
 
 
   <!-- =====================================================
-       LOADING OVERLAY
+       LOADING
   ====================================================== -->
 
   <div id="loadingOverlay">
@@ -87,144 +87,140 @@
 
 
   <!-- =====================================================
-       40TH BIRTHDAY HEADER
+       50TH BIRTHDAY TOP SCENERY
   ====================================================== -->
 
-  <header id="birthdayHeader">
+  <div
+    class="birthday-scenery birthday-top-scenery"
+  ></div>
 
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header>
 
     <div id="headerContent">
 
 
-      <!-- =================================================
-           LEFT BIRTHDAY MESSAGE
-      ================================================== -->
+      <!-- LEFT MESSAGE -->
 
-      <div class="birthdaySideMessage birthdaySideLeft">
+      <div
+        class="
+          birthday-header-message
+          birthday-message-left
+        "
+      >
 
-        <span>
-          FORTY LOOKS
-        </span>
-
-        <span>
-          GOOD ON YOU!
-        </span>
+        FIFTY LOOKS<br>
+        GOOD ON YOU!
 
       </div>
 
 
 
-      <!-- =================================================
-           BIRTHDAY PERSON
-      ================================================== -->
+      <!-- BIRTHDAY PERSON PHOTO -->
 
-      <div id="birthdayPerson">
+      <div class="birthday-person-frame">
 
-        <div id="birthdayPhotoFrame">
-
-          <img
-            id="headerPhoto"
-            src="images/BirthdayPerson.webp"
-            alt="40th Birthday"
-          >
-
-        </div>
+        <img
+          id="headerPhoto"
+          src="images/BirthdayPerson.webp"
+          alt="50th Birthday"
+          loading="lazy"
+        >
 
       </div>
 
 
 
-      <!-- =================================================
-           MAIN GAME TITLE
-      ================================================== -->
+      <!-- MAIN TITLE -->
 
       <div id="headerTitles">
 
-        <h1 id="gameTitle">
+        <h1 class="game-title">
 
-          <span class="titleLine">
-            CASH IT
-          </span>
+          CASH IT
 
-          <span class="titleOr">
+          <span class="title-or">
             OR
           </span>
 
-          <span class="titleLine">
-            CHANCE IT
-          </span>
+          CHANCE IT
 
         </h1>
 
 
-        <div id="birthdayEdition">
-          40th Birthday Edition
+        <div class="birthday-subtitle">
+
+          50th Birthday Edition
+
         </div>
 
       </div>
 
 
 
-      <!-- =================================================
-           RIGHT BIRTHDAY MESSAGE
-      ================================================== -->
+      <!-- RIGHT MESSAGE -->
 
-      <div class="birthdaySideMessage birthdaySideRight">
+      <div
+        class="
+          birthday-header-message
+          birthday-message-right
+        "
+      >
 
-        <span>
-          40 AND
-        </span>
-
-        <span>
-          THRIVING!
-        </span>
+        50 AND<br>
+        FABULOUS!
 
       </div>
 
 
 
-      <!-- =================================================
-           HEADER CONTROLS
-      ================================================== -->
+      <!-- HEADER BUTTONS -->
 
       <div id="headerButtons">
 
 
+        <!--
+          IMPORTANT:
+          This starts as "Full Screen".
+
+          screen.js will automatically change it
+          to "Exit Full Screen" when fullscreen
+          is actually active.
+        -->
+
         <button
           id="fullScreenBtn"
+          type="button"
           onclick="toggleFullScreen()"
         >
           Full Screen
         </button>
 
 
-        <button id="watchIntroBtn">
+        <button
+          id="watchIntroBtn"
+          type="button"
+        >
           Watch Intro Again
         </button>
 
-
-        <!-- Background Music Button -->
 
         <button
           id="musicToggleBtn"
           type="button"
         >
-          🔊 Music On
+          🔊 Music<br>On
         </button>
 
 
       </div>
 
     </div>
-
-
-
-    <!-- =================================================
-         GOLD DIVIDER
-    ================================================== -->
-
-    <div class="goldDivider"></div>
-
 
   </header>
 
@@ -234,28 +230,28 @@
        MAIN GAME AREA
   ====================================================== -->
 
-  <main id="gameArea">
+  <main>
 
 
-    <!-- ===================================================
-         BRIEFCASES / PHOTO CARDS
-    ==================================================== -->
+    <!-- PHOTO GAME BOARD -->
 
     <section id="briefcasesSection">
 
+
+      <!-- PHOTOS ARE GENERATED BY JAVASCRIPT -->
 
       <div id="briefcasesContainer"></div>
 
 
 
-      <!-- ===============================================
-           GAME INSTRUCTIONS
-      ================================================ -->
+      <!-- GAME INSTRUCTIONS -->
 
       <div id="briefcasesInfo">
 
         <p id="gameMessage">
-          Choose a photo to make your personal pick.
+
+          Choose your personal pick.
+
         </p>
 
       </div>
@@ -265,39 +261,32 @@
 
 
 
-    <!-- ===================================================
+    <!-- =================================================
          PRIZE BOARD
-    ==================================================== -->
+    ================================================== -->
 
     <aside id="prizesSection">
 
 
-      <div class="prizeBoardHeader">
-
-        <h2>
-          Prizes
-        </h2>
-
-      </div>
+      <h2>
+        PRIZES
+      </h2>
 
 
       <ul id="prizeBoard"></ul>
 
 
 
-      <!-- ===============================================
-           PREVIOUS OFFERS
-      ================================================ -->
+      <div class="prize-divider"></div>
 
-      <div id="previousOffersSection">
 
-        <h2>
-          Previous Offers
-        </h2>
 
-        <ul id="offersHistory"></ul>
+      <h2>
+        PREVIOUS OFFERS
+      </h2>
 
-      </div>
+
+      <ul id="offersHistory"></ul>
 
 
     </aside>
@@ -308,72 +297,82 @@
 
 
   <!-- =====================================================
-       BIRTHDAY FOOTER
+       BOTTOM BIRTHDAY MESSAGE
   ====================================================== -->
 
-  <div id="birthdayFooter">
+  <div class="birthday-bottom-area">
 
 
-    <!-- Left Message -->
+    <!-- LEFT MESSAGE -->
 
-    <div class="birthdayFooterSide">
+    <div
+      class="
+        birthday-bottom-message
+        birthday-bottom-left
+      "
+    >
 
-      <span>
-        SAME PERSON.
+      SAME PEOPLE.<br>
+      BIGGER MEMORIES!
+
+    </div>
+
+
+
+    <!-- CENTER MESSAGE -->
+
+    <div class="birthday-cheers">
+
+      <span class="birthday-sparkle">
+        ✦
+      </span>
+
+      <span class="birthday-heart">
+        ♥
       </span>
 
       <span>
-        BIGGER ADVENTURES!
+        Cheers to 50!
+      </span>
+
+      <span class="birthday-heart">
+        ♥
+      </span>
+
+      <span class="birthday-sparkle">
+        ✦
       </span>
 
     </div>
 
 
 
-    <!-- Center -->
+    <!-- RIGHT MESSAGE -->
 
-    <div id="birthdayFooterCenter">
+    <div
+      class="
+        birthday-bottom-message
+        birthday-bottom-right
+      "
+    >
 
-      <span class="footerSparkle">
-        ✦
-      </span>
-
-      <span class="footerHeart">
-        ♥
-      </span>
-
-      <div id="birthdayFooterText">
-        Cheers to 40!
-      </div>
-
-      <span class="footerHeart">
-        ♥
-      </span>
-
-      <span class="footerSparkle">
-        ✦
-      </span>
-
-    </div>
-
-
-
-    <!-- Right Message -->
-
-    <div class="birthdayFooterSide">
-
-      <span>
-        GOOD FRIENDS.
-      </span>
-
-      <span>
-        BIGGER PLANS!
-      </span>
+      GOOD FRIENDS.<br>
+      BIGGER PLANS!
 
     </div>
 
 
   </div>
+
+
+
+  <!-- =====================================================
+       BOTTOM SCENERY
+  ====================================================== -->
+
+  <div
+    class="birthday-scenery birthday-bottom-scenery"
+  ></div>
 
 
 
@@ -386,20 +385,7 @@
 
 
   <!-- =====================================================
-       BACKGROUND MUSIC
-  ====================================================== -->
-
-  <audio
-    id="backgroundMusic"
-    src="audio/quiz-master.mp3"
-    preload="auto"
-    loop
-  ></audio>
-
-
-
-  <!-- =====================================================
-       GAME SOUND EFFECTS
+       SOUND EFFECTS
   ====================================================== -->
 
   <audio
@@ -446,6 +432,19 @@
 
 
   <!-- =====================================================
+       BACKGROUND MUSIC
+  ====================================================== -->
+
+  <audio
+    id="backgroundMusic"
+    src="audio/quiz-master.mp3"
+    preload="auto"
+    loop
+  ></audio>
+
+
+
+  <!-- =====================================================
        OFFER MODAL
   ====================================================== -->
 
@@ -465,7 +464,7 @@
 
 
   <!-- =====================================================
-       JAVASCRIPT FILES
+       GAME SCRIPTS
   ====================================================== -->
 
   <script
@@ -506,263 +505,330 @@
 
 
   <!-- =====================================================
-       BACKGROUND MUSIC CONTROLS
+       BACKGROUND MUSIC CONTROL
   ====================================================== -->
 
   <script>
 
-    /* =====================================================
-       BACKGROUND MUSIC
-    ====================================================== */
-
-    const backgroundMusic =
-      document.getElementById("backgroundMusic");
-
-    const musicToggleBtn =
-      document.getElementById("musicToggleBtn");
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
 
 
-    /*
-      Keep the background music quiet so the
-      game's sound effects remain easy to hear.
-    */
-
-    backgroundMusic.volume = 0.12;
-
-
-    let musicEnabled = true;
-
-
-
-    /* =====================================================
-       START MUSIC
-    ====================================================== */
-
-    function startBackgroundMusic() {
-
-      if (!musicEnabled) {
-        return;
-      }
-
-      backgroundMusic
-        .play()
-        .catch(function(error) {
-
-          console.log(
-            "Background music is waiting for user interaction."
+        const backgroundMusic =
+          document.getElementById(
+            "backgroundMusic"
           );
 
-        });
 
-    }
-
-
-
-    /* =====================================================
-       STOP MUSIC
-    ====================================================== */
-
-    function stopBackgroundMusic() {
-
-      backgroundMusic.pause();
-
-    }
+        const musicToggleBtn =
+          document.getElementById(
+            "musicToggleBtn"
+          );
 
 
+        const introVideo =
+          document.getElementById(
+            "introVideo"
+          );
 
-    /* =====================================================
-       MUSIC BUTTON
-    ====================================================== */
 
-    musicToggleBtn.addEventListener(
-      "click",
-      function() {
+        const skipIntroButton =
+          document.getElementById(
+            "skipIntroButton"
+          );
 
-        if (backgroundMusic.paused) {
 
-          musicEnabled = true;
+        const watchIntroBtn =
+          document.getElementById(
+            "watchIntroBtn"
+          );
+
+
+        let musicEnabled = true;
+
+
+
+        /* =========================================
+           MUSIC SETTINGS
+        ========================================== */
+
+        backgroundMusic.volume = 0.12;
+
+
+
+        /* =========================================
+           START MUSIC
+        ========================================== */
+
+        function startBackgroundMusic() {
+
+          if (!musicEnabled) {
+            return;
+          }
+
 
           backgroundMusic
             .play()
-            .catch(function(error) {
+            .catch(() => {
 
-              console.log(
-                "Unable to start background music:",
-                error
-              );
+              /*
+                Browser autoplay protection may
+                prevent music until the player
+                interacts with the page.
+              */
 
             });
 
-          musicToggleBtn.textContent =
-            "🔊 Music On";
-
         }
 
-        else {
 
-          musicEnabled = false;
+
+        /* =========================================
+           STOP MUSIC
+        ========================================== */
+
+        function stopBackgroundMusic() {
 
           backgroundMusic.pause();
 
-          musicToggleBtn.textContent =
-            "🔇 Music Off";
+        }
+
+
+
+        /* =========================================
+           UPDATE MUSIC BUTTON
+        ========================================== */
+
+        function updateMusicButton() {
+
+          if (musicEnabled) {
+
+            musicToggleBtn.innerHTML =
+              "🔊 Music<br>On";
+
+          } else {
+
+            musicToggleBtn.innerHTML =
+              "🔇 Music<br>Off";
+
+          }
 
         }
+
+
+
+        /* =========================================
+           MUSIC BUTTON
+        ========================================== */
+
+        musicToggleBtn.addEventListener(
+          "click",
+          function () {
+
+            musicEnabled =
+              !musicEnabled;
+
+
+            if (musicEnabled) {
+
+              startBackgroundMusic();
+
+            } else {
+
+              stopBackgroundMusic();
+
+            }
+
+
+            updateMusicButton();
+
+          }
+        );
+
+
+
+        /* =========================================
+           INTRO FINISHES
+        ========================================== */
+
+        if (introVideo) {
+
+          introVideo.addEventListener(
+            "ended",
+            function () {
+
+              startBackgroundMusic();
+
+            }
+          );
+
+        }
+
+
+
+        /* =========================================
+           SKIP INTRO
+        ========================================== */
+
+        if (skipIntroButton) {
+
+          skipIntroButton.addEventListener(
+            "click",
+            function () {
+
+              setTimeout(
+                startBackgroundMusic,
+                250
+              );
+
+            }
+          );
+
+        }
+
+
+
+        /* =========================================
+           WATCH INTRO AGAIN
+        ========================================== */
+
+        if (watchIntroBtn) {
+
+          watchIntroBtn.addEventListener(
+            "click",
+            function () {
+
+              stopBackgroundMusic();
+
+            }
+          );
+
+        }
+
+
+
+        /* =========================================
+           AUTOPLAY FALLBACK
+
+           Start background music after the
+           player's first interaction with the
+           game if autoplay was blocked.
+        ========================================== */
+
+        document.addEventListener(
+          "click",
+          function startMusicAfterInteraction(
+            event
+          ) {
+
+            if (
+              event.target.closest(
+                "#introVideoContainer"
+              )
+            ) {
+
+              return;
+
+            }
+
+
+            startBackgroundMusic();
+
+
+            document.removeEventListener(
+              "click",
+              startMusicAfterInteraction
+            );
+
+          }
+        );
+
+
+        updateMusicButton();
 
       }
     );
 
-
-
-    /* =====================================================
-       START MUSIC AFTER SKIPPING INTRO
-    ====================================================== */
-
-    const skipIntroButton =
-      document.getElementById("skipIntroButton");
-
-
-    if (skipIntroButton) {
-
-      skipIntroButton.addEventListener(
-        "click",
-        function() {
-
-          setTimeout(
-            startBackgroundMusic,
-            300
-          );
-
-        }
-      );
-
-    }
+  </script>
 
 
 
-    /* =====================================================
-       START MUSIC WHEN INTRO FINISHES
-    ====================================================== */
+  <!-- =====================================================
+       GAME INITIALIZATION
+  ====================================================== -->
 
-    const introVideo =
-      document.getElementById("introVideo");
+  <script>
 
-
-    if (introVideo) {
-
-      introVideo.addEventListener(
-        "ended",
-        function() {
-
-          setTimeout(
-            startBackgroundMusic,
-            300
-          );
-
-        }
-      );
-
-    }
+    window.addEventListener(
+      "load",
+      function () {
 
 
+        /* -----------------------------------------
+           REMOVE LOADING SCREEN
+        ------------------------------------------ */
 
-    /* =====================================================
-       WATCH INTRO AGAIN
-    ====================================================== */
-
-    const watchIntroBtn =
-      document.getElementById("watchIntroBtn");
-
-
-    if (watchIntroBtn) {
-
-      watchIntroBtn.addEventListener(
-        "click",
-        function() {
-
-          stopBackgroundMusic();
-
-        }
-      );
-
-    }
-
-
-
-    /* =====================================================
-       IF USER INTERACTS WITH GAME
-       AND MUSIC HAS NOT STARTED YET
-    ====================================================== */
-
-    document.addEventListener(
-      "click",
-      function startMusicOnFirstInteraction(event) {
-
-        /*
-          Do not start it if the user has
-          deliberately turned music off.
-        */
-
-        if (!musicEnabled) {
-          return;
-        }
-
-
-        /*
-          Don't start game music while
-          the intro video is visible.
-        */
-
-        const introContainer =
+        const loadingOverlay =
           document.getElementById(
-            "introVideoContainer"
+            "loadingOverlay"
           );
 
+
+        if (loadingOverlay) {
+
+          loadingOverlay.style.display =
+            "none";
+
+        }
+
+
+
+        /* -----------------------------------------
+           RENDER PHOTOS
+        ------------------------------------------ */
 
         if (
-          introContainer &&
-          window.getComputedStyle(
-            introContainer
-          ).display !== "none"
+          typeof renderBriefcases ===
+          "function"
         ) {
 
-          return;
+          renderBriefcases();
 
         }
 
 
-        if (backgroundMusic.paused) {
 
-          startBackgroundMusic();
+        /* -----------------------------------------
+           UPDATE PRIZE / OFFER PANELS
+        ------------------------------------------ */
+
+        if (
+          typeof updateSidePanels ===
+          "function"
+        ) {
+
+          updateSidePanels();
+
+        }
+
+
+
+        /* -----------------------------------------
+           SHOW FIRST ROUND
+        ------------------------------------------ */
+
+        if (
+          typeof showRoundModal ===
+          "function"
+        ) {
+
+          showRoundModal(1);
 
         }
 
       }
     );
-
-
-
-    /* =====================================================
-       PAGE LOAD
-    ====================================================== */
-
-    window.onload = function() {
-
-      document.getElementById(
-        "loadingOverlay"
-      ).style.display =
-        "none";
-
-
-      renderBriefcases();
-
-
-      updateSidePanels();
-
-
-      showRoundModal(1);
-
-    };
 
   </script>
 

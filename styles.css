@@ -1,6 +1,6 @@
 /* ==========================================================
    CASH IT OR CHANCE IT
-   50TH BIRTHDAY EDITION
+   40TH BIRTHDAY EDITION
    ========================================================== */
 
 
@@ -343,7 +343,7 @@ ul {
 
 
 /* ==========================================================
-   50TH BIRTHDAY EDITION
+   40TH BIRTHDAY EDITION
    ========================================================== */
 
 #birthdayEdition {
@@ -3541,11 +3541,11 @@ body > .personal-box-reveal > .personal-box-message {
 
 
 /* ==========================================================
-   50TH BIRTHDAY EDITION
+   40TH BIRTHDAY EDITION
    Compatibility + decorative theme for the updated index.html
    ========================================================== */
 
-body.birthday-50-edition {
+body.birthday-40-edition {
   --gold: #d4af37;
   --gold-bright: #ffd700;
   --gold-light: #fff0a6;
@@ -3563,7 +3563,7 @@ body.birthday-50-edition {
 
 /* ---------------- TOP / BOTTOM ART ---------------- */
 
-.birthday-50-edition .birthday-scenery {
+.birthday-40-edition .birthday-scenery {
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -3571,9 +3571,9 @@ body.birthday-50-edition {
   pointer-events: none;
 }
 
-.birthday-50-edition .birthday-top-scenery {
+.birthday-40-edition .birthday-top-scenery {
   height: clamp(82px, 10vw, 145px);
-  background-image: url("images/50th-birthday-top.webp");
+  background-image: url("images/40th-birthday-top.webp");
   border-bottom: 2px solid var(--gold);
   box-shadow:
     0 5px 20px rgba(0, 0, 0, 0.85),
@@ -3583,7 +3583,7 @@ body.birthday-50-edition {
 .birthday-50-edition .birthday-bottom-scenery {
   height: clamp(70px, 8vw, 120px);
   margin-top: 0;
-  background-image: url("images/50th-birthday-bottom.webp");
+  background-image: url("images/40th-birthday-bottom.webp");
   background-position: center bottom;
   border-top: 1px solid rgba(212, 175, 55, 0.65);
 }
@@ -3591,7 +3591,7 @@ body.birthday-50-edition {
 
 /* ---------------- UPDATED HEADER ---------------- */
 
-.birthday-50-edition > header {
+.birthday-40-edition > header {
   position: relative;
   width: 100%;
   margin: 0 0 7px;
@@ -3604,7 +3604,7 @@ body.birthday-50-edition {
   overflow: visible;
 }
 
-.birthday-50-edition #headerContent {
+.birthday-40-edition #headerContent {
   grid-template-columns:
     minmax(135px, 0.8fr)
     160px
@@ -3613,7 +3613,7 @@ body.birthday-50-edition {
     150px;
 }
 
-.birthday-50-edition .birthday-person-frame {
+.birthday-40-edition .birthday-person-frame {
   position: relative;
   display: flex;
   justify-content: center;
@@ -3641,7 +3641,7 @@ body.birthday-50-edition {
   z-index: 5;
 }
 
-.birthday-50-edition .birthday-person-frame::before {
+.birthday-40-edition .birthday-person-frame::before {
   content: "";
   position: absolute;
   inset: -7px;
@@ -3650,7 +3650,7 @@ body.birthday-50-edition {
   pointer-events: none;
 }
 
-.birthday-50-edition #headerPhoto {
+.birthday-40-edition #headerPhoto {
   width: 145px;
   height: 145px;
   object-fit: cover;
@@ -3659,11 +3659,11 @@ body.birthday-50-edition {
   border-radius: 9px;
 }
 
-.birthday-50-edition #headerTitles {
+.birthday-40-edition #headerTitles {
   min-width: 0;
 }
 
-.birthday-50-edition .game-title {
+.birthday-40-edition .game-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3702,7 +3702,7 @@ body.birthday-50-edition {
   animation: titleShine 3s ease-in-out infinite;
 }
 
-.birthday-50-edition .title-or {
+.birthday-40-edition .title-or {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -3723,7 +3723,7 @@ body.birthday-50-edition {
   line-height: 1;
 }
 
-.birthday-50-edition .birthday-subtitle {
+.birthday-40-edition .birthday-subtitle {
   margin-top: 7px;
 
   color: #fff1b8;
@@ -3743,7 +3743,7 @@ body.birthday-50-edition {
     0 0 28px rgba(255, 170, 0, 0.45);
 }
 
-.birthday-50-edition .birthday-header-message {
+.birthday-40-edition .birthday-header-message {
   min-height: 115px;
 
   display: flex;
@@ -3776,18 +3776,18 @@ body.birthday-50-edition {
   line-height: 1.25;
 }
 
-.birthday-50-edition .birthday-message-left {
+.birthday-40-edition .birthday-message-left {
   transform: rotate(-1deg);
 }
 
-.birthday-50-edition .birthday-message-right {
+.birthday-40-edition .birthday-message-right {
   transform: rotate(1deg);
 }
 
 
 /* ---------------- MUSIC BUTTON ---------------- */
 
-.birthday-50-edition #musicToggleBtn {
+.birthday-40-edition #musicToggleBtn {
   width: 100%;
   margin: 0;
   padding: 8px 10px;
@@ -3809,7 +3809,7 @@ body.birthday-50-edition {
     inset 0 1px 2px rgba(255, 255, 255, 0.55);
 }
 
-.birthday-50-edition #musicToggleBtn:hover {
+.birthday-40-edition #musicToggleBtn:hover {
   background:
     linear-gradient(180deg, #fff2a0, #ffd700);
 }
@@ -3817,23 +3817,23 @@ body.birthday-50-edition {
 
 /* ---------------- MAIN BOARD ---------------- */
 
-.birthday-50-edition main {
+.birthday-40-edition main {
   padding: 0 6px;
 }
 
-.birthday-50-edition #briefcasesSection {
+.birthday-40-edition #briefcasesSection {
   background:
     radial-gradient(circle at 50% 10%, rgba(80, 54, 8, 0.17), transparent 38%),
     linear-gradient(180deg, rgba(16, 16, 16, 0.97), rgba(0, 0, 0, 0.99));
 }
 
-.birthday-50-edition #prizesSection {
+.birthday-40-edition #prizesSection {
   background:
     radial-gradient(circle at top, rgba(94, 62, 8, 0.22), transparent 30%),
     linear-gradient(180deg, #101010, #020202);
 }
 
-.birthday-50-edition .prize-divider {
+.birthday-40-edition .prize-divider {
   width: 100%;
   height: 2px;
   margin: 8px 0;
@@ -3855,9 +3855,9 @@ body.birthday-50-edition {
 }
 
 
-/* ---------------- 50TH FOOTER ---------------- */
+/* ---------------- 40TH FOOTER ---------------- */
 
-.birthday-50-edition .birthday-bottom-area {
+.birthday-40-edition .birthday-bottom-area {
   width: calc(100% - 12px);
   max-width: 1600px;
 
@@ -3881,7 +3881,7 @@ body.birthday-50-edition {
   border-bottom: 1px solid rgba(212, 175, 55, 0.5);
 }
 
-.birthday-50-edition .birthday-cheers {
+.birthday-40-edition .birthday-cheers {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3903,13 +3903,13 @@ body.birthday-50-edition {
     0 0 18px rgba(255, 180, 0, 0.7);
 }
 
-.birthday-50-edition .birthday-heart,
-.birthday-50-edition .birthday-sparkle {
+.birthday-40-edition .birthday-heart,
+.birthday-40-edition .birthday-sparkle {
   color: #ffd700;
   font-size: clamp(1.2rem, 1.8vw, 2rem);
 }
 
-.birthday-50-edition .birthday-bottom-message {
+.birthday-40-edition .birthday-bottom-message {
   min-height: 50px;
 
   display: flex;
@@ -3934,12 +3934,12 @@ body.birthday-50-edition {
 
 
 /* ==========================================================
-   50TH DESKTOP / TV FULLSCREEN
+   40TH DESKTOP / TV FULLSCREEN
    ========================================================== */
 
 @media (min-width: 769px) {
 
-  body.birthday-50-edition.tv-fullscreen {
+  body.birthday-40-edition.tv-fullscreen {
     display: grid;
 
     /* Top art | Header | Game | Footer | Bottom art */
@@ -3961,14 +3961,14 @@ body.birthday-50-edition {
     background: #000;
   }
 
-  body.birthday-50-edition.tv-fullscreen .birthday-top-scenery {
+  body.birthday-40-edition.tv-fullscreen .birthday-top-scenery {
     display: block !important;
     width: 100% !important;
     height: 7vh !important;
     min-height: 7vh !important;
     margin: 0 !important;
     padding: 0 !important;
-    background-image: url("images/50th-birthday-top.webp") !important;
+    background-image: url("images/40th-birthday-top.webp") !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
@@ -3978,14 +3978,14 @@ body.birthday-50-edition {
     z-index: 2;
   }
 
-  body.birthday-50-edition.tv-fullscreen .birthday-bottom-scenery {
+  body.birthday-40-edition.tv-fullscreen .birthday-bottom-scenery {
     display: block !important;
     width: 100% !important;
     height: 7vh !important;
     min-height: 7vh !important;
     margin: 0 !important;
     padding: 0 !important;
-    background-image: url("images/50th-birthday-bottom.webp") !important;
+    background-image: url("images/40th-birthday-bottom.webp") !important;
     background-size: cover !important;
     background-position: center bottom !important;
     background-repeat: no-repeat !important;
@@ -3995,7 +3995,7 @@ body.birthday-50-edition {
     z-index: 2;
   }
 
-  body.birthday-50-edition.tv-fullscreen > header {
+  body.birthday-40-edition.tv-fullscreen > header {
     width: 100%;
     height: 15vh;
     min-height: 0;
@@ -4006,7 +4006,7 @@ body.birthday-50-edition {
     overflow: visible;
   }
 
-  body.birthday-50-edition.tv-fullscreen #headerContent {
+  body.birthday-40-edition.tv-fullscreen #headerContent {
     width: 100%;
     height: calc(100% - 5px);
     min-height: 0;
@@ -4021,18 +4021,18 @@ body.birthday-50-edition {
     gap: 0.7vw;
   }
 
-  body.birthday-50-edition.tv-fullscreen .birthday-person-frame {
+  body.birthday-40-edition.tv-fullscreen .birthday-person-frame {
     padding: 0.3vh;
     border-width: 3px;
   }
 
-  body.birthday-50-edition.tv-fullscreen #headerPhoto {
+  body.birthday-40-edition.tv-fullscreen #headerPhoto {
     width: auto;
     height: 13vh;
     max-width: 9vw;
   }
 
-  body.birthday-50-edition.tv-fullscreen .game-title {
+  body.birthday-40-edition.tv-fullscreen .game-title {
     padding: 0 8px;
 
     font-size:
@@ -4045,7 +4045,7 @@ body.birthday-50-edition {
     line-height: 1;
   }
 
-  body.birthday-50-edition.tv-fullscreen .birthday-subtitle {
+  body.birthday-40-edition.tv-fullscreen .birthday-subtitle {
     margin-top: 0.5vh;
 
     font-size:
@@ -4056,7 +4056,7 @@ body.birthday-50-edition {
       );
   }
 
-  body.birthday-50-edition.tv-fullscreen .birthday-header-message {
+  body.birthday-40-edition.tv-fullscreen .birthday-header-message {
     min-height: 0;
     height: 12vh;
 
@@ -4070,7 +4070,7 @@ body.birthday-50-edition {
       );
   }
 
-  body.birthday-50-edition.tv-fullscreen #musicToggleBtn {
+  body.birthday-40-edition.tv-fullscreen #musicToggleBtn {
     padding: 0.45vh 0.5vw;
 
     font-size:
@@ -4081,7 +4081,7 @@ body.birthday-50-edition {
       );
   }
 
-  body.birthday-50-edition.tv-fullscreen main {
+  body.birthday-40-edition.tv-fullscreen main {
     width: 100%;
     height: auto;
     min-height: 0;
@@ -4101,7 +4101,7 @@ body.birthday-50-edition {
     overflow: hidden !important;
   }
 
-  body.birthday-50-edition.tv-fullscreen .birthday-bottom-area {
+  body.birthday-40-edition.tv-fullscreen .birthday-bottom-area {
     width: 100%;
     height: 6vh;
     max-width: none;
@@ -4117,7 +4117,7 @@ body.birthday-50-edition {
     overflow: hidden;
   }
 
-  body.birthday-50-edition.tv-fullscreen .birthday-cheers {
+  body.birthday-40-edition.tv-fullscreen .birthday-cheers {
     font-size:
       clamp(
         21px,
@@ -4126,7 +4126,7 @@ body.birthday-50-edition {
       );
   }
 
-  body.birthday-50-edition.tv-fullscreen .birthday-bottom-message {
+  body.birthday-40-edition.tv-fullscreen .birthday-bottom-message {
     min-height: 0;
     height: 4.7vh;
 
@@ -4143,12 +4143,12 @@ body.birthday-50-edition {
 
 
 /* ==========================================================
-   50TH TABLET
+   40TH TABLET
    ========================================================== */
 
 @media (max-width: 1200px) and (min-width: 769px) {
 
-  .birthday-50-edition #headerContent {
+  .birthday-40-edition #headerContent {
     grid-template-columns:
       110px
       125px
@@ -4158,11 +4158,11 @@ body.birthday-50-edition {
     gap: 8px;
   }
 
-  .birthday-50-edition .birthday-message-right {
+  .birthday-40-edition .birthday-message-right {
     display: none;
   }
 
-  .birthday-50-edition .game-title {
+  .birthday-40-edition .game-title {
     font-size:
       clamp(
         1.8rem,
@@ -4174,22 +4174,22 @@ body.birthday-50-edition {
 
 
 /* ==========================================================
-   50TH MOBILE
+   40TH MOBILE
    ========================================================== */
 
 @media (max-width: 768px) {
 
-  body.birthday-50-edition {
+  body.birthday-40-edition {
     padding: 0 !important;
   }
 
-  .birthday-50-edition .birthday-top-scenery {
+  .birthday-40-edition .birthday-top-scenery {
     height: 78px;
     background-size: cover;
   }
 
-  .birthday-50-edition > header,
-  body.birthday-50-edition.tv-fullscreen > header {
+  .birthday-40-edition > header,
+  body.birthday-40-edition.tv-fullscreen > header {
     width: 100% !important;
     height: auto !important;
     min-height: 0 !important;
@@ -4198,8 +4198,8 @@ body.birthday-50-edition {
     padding: 7px 4px !important;
   }
 
-  .birthday-50-edition #headerContent,
-  body.birthday-50-edition.tv-fullscreen #headerContent {
+  .birthday-40-edition #headerContent,
+  body.birthday-40-edition.tv-fullscreen #headerContent {
     width: 100% !important;
     height: auto !important;
     min-height: 0 !important;
@@ -4215,27 +4215,27 @@ body.birthday-50-edition {
     align-items: center !important;
   }
 
-  .birthday-50-edition .birthday-message-left,
-  .birthday-50-edition .birthday-message-right {
+  .birthday-40-edition .birthday-message-left,
+  .birthday-40-edition .birthday-message-right {
     display: none !important;
   }
 
-  .birthday-50-edition .birthday-person-frame {
+  .birthday-40-edition .birthday-person-frame {
     grid-column: 1;
     grid-row: 1;
   }
 
-  .birthday-50-edition #headerPhoto {
+  .birthday-40-edition #headerPhoto {
     width: 82px !important;
     height: 82px !important;
   }
 
-  .birthday-50-edition #headerTitles {
+  .birthday-40-edition #headerTitles {
     grid-column: 2;
     grid-row: 1;
   }
 
-  .birthday-50-edition .game-title {
+  .birthday-40-edition .game-title {
     gap: 5px;
 
     padding: 2px 0;
@@ -4250,7 +4250,7 @@ body.birthday-50-edition {
     line-height: 1.02;
   }
 
-  .birthday-50-edition .birthday-subtitle {
+  .birthday-40-edition .birthday-subtitle {
     margin-top: 5px;
 
     font-size:
@@ -4261,7 +4261,7 @@ body.birthday-50-edition {
       );
   }
 
-  .birthday-50-edition #headerButtons {
+  .birthday-40-edition #headerButtons {
     grid-column: 1 / -1;
     grid-row: 2;
 
@@ -4275,9 +4275,9 @@ body.birthday-50-edition {
     width: 100% !important;
   }
 
-  .birthday-50-edition #fullScreenBtn,
-  .birthday-50-edition #watchIntroBtn,
-  .birthday-50-edition #musicToggleBtn {
+  .birthday-40-edition #fullScreenBtn,
+  .birthday-40-edition #watchIntroBtn,
+  .birthday-40-edition #musicToggleBtn {
     width: 100% !important;
 
     margin: 0 !important;
@@ -4287,12 +4287,12 @@ body.birthday-50-edition {
     font-size: 0.7rem !important;
   }
 
-  .birthday-50-edition main {
+  .birthday-40-edition main {
     padding: 0 3px !important;
   }
 
-  .birthday-50-edition .birthday-bottom-area,
-  body.birthday-50-edition.tv-fullscreen .birthday-bottom-area {
+  .birthday-40-edition .birthday-bottom-area,
+  body.birthday-40-edition.tv-fullscreen .birthday-bottom-area {
     width: 100% !important;
     height: auto !important;
 
@@ -4302,11 +4302,11 @@ body.birthday-50-edition {
     padding: 8px 4px !important;
   }
 
-  .birthday-50-edition .birthday-bottom-message {
+  .birthday-40-edition .birthday-bottom-message {
     display: none !important;
   }
 
-  .birthday-50-edition .birthday-cheers {
+  .birthday-40-edition .birthday-cheers {
     width: 100%;
 
     gap: 7px;
@@ -4319,47 +4319,47 @@ body.birthday-50-edition {
       ) !important;
   }
 
-  .birthday-50-edition .birthday-bottom-scenery {
+  .birthday-40-edition .birthday-bottom-scenery {
     height: 70px;
   }
 }
 
 
 /* ==========================================================
-   50TH VERY SMALL PHONES
+   40TH VERY SMALL PHONES
    ========================================================== */
 
 @media (max-width: 350px) {
 
-  .birthday-50-edition #headerPhoto {
+  .birthday-40-edition #headerPhoto {
     width: 74px !important;
     height: 74px !important;
   }
 
-  .birthday-50-edition .game-title {
+  .birthday-40-edition .game-title {
     font-size: 1.08rem !important;
   }
 
-  .birthday-50-edition .birthday-subtitle {
+  .birthday-40-edition .birthday-subtitle {
     font-size: 1.18rem !important;
   }
 }
 
 
 /* ==========================================================
-   50TH BIRTHDAY — FULLSCREEN ART FIX
+   40TH BIRTHDAY — FULLSCREEN ART FIX
    IMPORTANT: This does NOT resize the game/cards/header.
    It only fixes how the top, board, and bottom artwork render.
    ========================================================== */
 
-body.birthday-50-edition .birthday-top-scenery {
-  background-image: url("images/50th-birthday-top.webp") !important;
+body.birthday-40-edition .birthday-top-scenery {
+  background-image: url("images/40th-birthday-top.webp") !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: cover !important;
 }
 
-body.birthday-50-edition #briefcasesSection {
+body.birthday-40-edition #briefcasesSection {
   background-image:
     linear-gradient(
       180deg,
@@ -4367,7 +4367,7 @@ body.birthday-50-edition #briefcasesSection {
       rgba(0, 0, 0, 0.44) 55%,
       rgba(0, 0, 0, 0.62) 100%
     ),
-    url("images/50th-birthday-top.webp") !important;
+    url("images/40th-birthday-top.webp") !important;
 
   background-repeat:
     no-repeat,
@@ -4382,8 +4382,8 @@ body.birthday-50-edition #briefcasesSection {
     cover !important;
 }
 
-body.birthday-50-edition .birthday-bottom-scenery {
-  background-image: url("images/50th-birthday-bottom.webp") !important;
+body.birthday-40-edition .birthday-bottom-scenery {
+  background-image: url("images/40th-birthday-bottom.webp") !important;
   background-repeat: no-repeat !important;
   background-position: center bottom !important;
   background-size: cover !important;
@@ -4393,14 +4393,14 @@ body.birthday-50-edition .birthday-bottom-scenery {
 /* FULLSCREEN — KEEP THE EXISTING GOOD SIZING */
 @media (min-width: 769px) {
 
-  body.birthday-50-edition.tv-fullscreen .birthday-top-scenery {
-    background-image: url("images/50th-birthday-top.webp") !important;
+  body.birthday-40-edition.tv-fullscreen .birthday-top-scenery {
+    background-image: url("images/40th-birthday-top.webp") !important;
     background-repeat: no-repeat !important;
     background-position: center center !important;
     background-size: cover !important;
   }
 
-  body.birthday-50-edition.tv-fullscreen #briefcasesSection {
+  body.birthday-40-edition.tv-fullscreen #briefcasesSection {
     background-image:
       linear-gradient(
         180deg,
@@ -4408,7 +4408,7 @@ body.birthday-50-edition .birthday-bottom-scenery {
         rgba(0, 0, 0, 0.38) 55%,
         rgba(0, 0, 0, 0.56) 100%
       ),
-      url("images/50th-birthday-top.webp") !important;
+      url("images/40th-birthday-top.webp") !important;
 
     background-repeat:
       no-repeat,
@@ -4423,8 +4423,8 @@ body.birthday-50-edition .birthday-bottom-scenery {
       cover !important;
   }
 
-  body.birthday-50-edition.tv-fullscreen .birthday-bottom-scenery {
-    background-image: url("images/50th-birthday-bottom.webp") !important;
+  body.birthday-40-edition.tv-fullscreen .birthday-bottom-scenery {
+    background-image: url("images/40th-birthday-bottom.webp") !important;
     background-repeat: no-repeat !important;
     background-position: center bottom !important;
     background-size: cover !important;
@@ -4436,19 +4436,19 @@ body.birthday-50-edition .birthday-bottom-scenery {
 /* MOBILE */
 @media (max-width: 768px) {
 
-  body.birthday-50-edition .birthday-top-scenery {
-    background-image: url("images/50th-birthday-top.webp") !important;
+  body.birthday-40-edition .birthday-top-scenery {
+    background-image: url("images/40th-birthday-top.webp") !important;
     background-position: center top !important;
     background-size: cover !important;
   }
 
-  body.birthday-50-edition #briefcasesSection {
+  body.birthday-40-edition #briefcasesSection {
     background-image:
       linear-gradient(
         rgba(0, 0, 0, 0.42),
         rgba(0, 0, 0, 0.64)
       ),
-      url("images/50th-birthday-top.webp") !important;
+      url("images/40th-birthday-top.webp") !important;
 
     background-position:
       center,
@@ -4459,8 +4459,8 @@ body.birthday-50-edition .birthday-bottom-scenery {
       cover !important;
   }
 
-  body.birthday-50-edition .birthday-bottom-scenery {
-    background-image: url("images/50th-birthday-bottom.webp") !important;
+  body.birthday-40-edition .birthday-bottom-scenery {
+    background-image: url("images/40th-birthday-bottom.webp") !important;
     background-position: center bottom !important;
     background-size: cover !important;
   }
@@ -4468,18 +4468,18 @@ body.birthday-50-edition .birthday-bottom-scenery {
 
 
 /* ==========================================================
-   FINAL 50TH BIRTHDAY ARTWORK PLACEMENT FIX
+   FINAL 40TH BIRTHDAY ARTWORK PLACEMENT FIX
    Keeps all existing sizing/layout.
    ========================================================== */
 
-body.birthday-50-edition .birthday-top-scenery {
-  background-image: url("images/50th-birthday-top.webp") !important;
+body.birthday-40-edition .birthday-top-scenery {
+  background-image: url("images/40th-birthday-top.webp") !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: cover !important;
 }
 
-body.birthday-50-edition #briefcasesSection {
+body.birthday-40-edition #briefcasesSection {
   background-image:
     radial-gradient(circle at 50% 8%, rgba(212,175,55,.10) 0%, rgba(212,175,55,.035) 28%, transparent 48%),
     linear-gradient(180deg, #11100d 0%, #090806 48%, #020202 100%) !important;
@@ -4488,8 +4488,8 @@ body.birthday-50-edition #briefcasesSection {
   background-size: cover !important;
 }
 
-body.birthday-50-edition .birthday-bottom-scenery {
-  background-image: url("images/50th-birthday-bottom.webp") !important;
+body.birthday-40-edition .birthday-bottom-scenery {
+  background-image: url("images/40th-birthday-bottom.webp") !important;
   background-repeat: no-repeat !important;
   background-position: center bottom !important;
   background-size: 100% 100% !important;
@@ -4497,14 +4497,14 @@ body.birthday-50-edition .birthday-bottom-scenery {
 }
 
 @media (min-width: 769px) {
-  body.birthday-50-edition.tv-fullscreen .birthday-top-scenery {
-    background-image: url("images/50th-birthday-top.webp") !important;
+  body.birthday-40-edition.tv-fullscreen .birthday-top-scenery {
+    background-image: url("images/40th-birthday-top.webp") !important;
     background-repeat: no-repeat !important;
     background-position: center center !important;
     background-size: cover !important;
   }
 
-  body.birthday-50-edition.tv-fullscreen #briefcasesSection {
+  body.birthday-40-edition.tv-fullscreen #briefcasesSection {
     background-image:
       radial-gradient(circle at 50% 8%, rgba(212,175,55,.10) 0%, rgba(212,175,55,.035) 28%, transparent 48%),
       linear-gradient(180deg, #11100d 0%, #090806 48%, #020202 100%) !important;
@@ -4513,8 +4513,8 @@ body.birthday-50-edition .birthday-bottom-scenery {
     background-size: cover !important;
   }
 
-  body.birthday-50-edition.tv-fullscreen .birthday-bottom-scenery {
-    background-image: url("images/50th-birthday-bottom.webp") !important;
+  body.birthday-40-edition.tv-fullscreen .birthday-bottom-scenery {
+    background-image: url("images/40th-birthday-bottom.webp") !important;
     background-repeat: no-repeat !important;
     background-position: center bottom !important;
     background-size: 100% 100% !important;
@@ -4523,14 +4523,14 @@ body.birthday-50-edition .birthday-bottom-scenery {
 }
 
 @media (max-width: 768px) {
-  body.birthday-50-edition .birthday-top-scenery {
-    background-image: url("images/50th-birthday-top.webp") !important;
+  body.birthday-40-edition .birthday-top-scenery {
+    background-image: url("images/40th-birthday-top.webp") !important;
     background-repeat: no-repeat !important;
     background-position: center top !important;
     background-size: cover !important;
   }
 
-  body.birthday-50-edition #briefcasesSection {
+  body.birthday-40-edition #briefcasesSection {
     background-image:
       radial-gradient(circle at 50% 8%, rgba(212,175,55,.09) 0%, transparent 45%),
       linear-gradient(180deg, #11100d 0%, #080705 50%, #020202 100%) !important;
@@ -4539,8 +4539,8 @@ body.birthday-50-edition .birthday-bottom-scenery {
     background-size: cover !important;
   }
 
-  body.birthday-50-edition .birthday-bottom-scenery {
-    background-image: url("images/50th-birthday-bottom.webp") !important;
+  body.birthday-40-edition .birthday-bottom-scenery {
+    background-image: url("images/40th-birthday-bottom.webp") !important;
     background-repeat: no-repeat !important;
     background-position: center bottom !important;
     background-size: 100% 100% !important;
@@ -4550,19 +4550,19 @@ body.birthday-50-edition .birthday-bottom-scenery {
 
 
 /* ==========================================================
-   FINAL DISPLAY POLISH — 50TH BIRTHDAY
+   FINAL DISPLAY POLISH — 40TH BIRTHDAY
    Preserve existing layout. Fix face crop + bottom artwork.
    ========================================================== */
 
-body.birthday-50-edition .briefcase img,
-body.birthday-50-edition .briefcase-image,
-body.birthday-50-edition .briefcase img.photo {
+body.birthday-40-edition .briefcase img,
+body.birthday-40-edition .briefcase-image,
+body.birthday-40-edition .briefcase img.photo {
   object-fit: cover !important;
   object-position: center 18% !important;
 }
 
-body.birthday-50-edition .birthday-bottom-scenery {
-  background-image: url("images/50th-birthday-bottom.webp") !important;
+body.birthday-40-edition .birthday-bottom-scenery {
+  background-image: url("images/40th-birthday-bottom.webp") !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: cover !important;
@@ -4572,15 +4572,15 @@ body.birthday-50-edition .birthday-bottom-scenery {
 }
 
 @media (min-width: 769px) {
-  body.birthday-50-edition.tv-fullscreen .briefcase img,
-  body.birthday-50-edition.tv-fullscreen .briefcase-image,
-  body.birthday-50-edition.tv-fullscreen .briefcase img.photo {
+  body.birthday-40-edition.tv-fullscreen .briefcase img,
+  body.birthday-40-edition.tv-fullscreen .briefcase-image,
+  body.birthday-40-edition.tv-fullscreen .briefcase img.photo {
     object-fit: cover !important;
     object-position: center 18% !important;
   }
 
-  body.birthday-50-edition.tv-fullscreen .birthday-bottom-scenery {
-    background-image: url("images/50th-birthday-bottom.webp") !important;
+  body.birthday-40-edition.tv-fullscreen .birthday-bottom-scenery {
+    background-image: url("images/40th-birthday-bottom.webp") !important;
     background-repeat: no-repeat !important;
     background-position: center center !important;
     background-size: cover !important;
@@ -4591,21 +4591,21 @@ body.birthday-50-edition .birthday-bottom-scenery {
 }
 
 @media (min-width: 769px) and (max-height: 850px) {
-  body.birthday-50-edition.tv-fullscreen .birthday-bottom-scenery {
+  body.birthday-40-edition.tv-fullscreen .birthday-bottom-scenery {
     height: 115px !important;
     min-height: 115px !important;
   }
 }
 
 @media (max-width: 768px) {
-  body.birthday-50-edition .briefcase img,
-  body.birthday-50-edition .briefcase-image,
-  body.birthday-50-edition .briefcase img.photo {
+  body.birthday-40-edition .briefcase img,
+  body.birthday-40-edition .briefcase-image,
+  body.birthday-40-edition .briefcase img.photo {
     object-fit: cover !important;
     object-position: center 15% !important;
   }
 
-  body.birthday-50-edition .birthday-bottom-scenery {
+  body.birthday-40-edition .birthday-bottom-scenery {
     height: 125px !important;
     min-height: 125px !important;
     background-position: center center !important;
@@ -4615,7 +4615,7 @@ body.birthday-50-edition .birthday-bottom-scenery {
 
 
 /* ==========================================================
-   50TH BIRTHDAY — FULLSCREEN EQUAL PHOTO ROWS FIX
+   40TH BIRTHDAY — FULLSCREEN EQUAL PHOTO ROWS FIX
    18 photos = 7 + 7 + 4. The old fullscreen CSS defined only
    TWO grid rows, so the browser created a taller implicit
    third row. This forces all three rows to the same height.
@@ -4623,7 +4623,7 @@ body.birthday-50-edition .birthday-bottom-scenery {
 
 @media (min-width: 769px) {
 
-  body.birthday-50-edition.tv-fullscreen #briefcasesContainer {
+  body.birthday-40-edition.tv-fullscreen #briefcasesContainer {
     grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
     grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
     grid-auto-rows: minmax(0, 1fr) !important;
@@ -4635,7 +4635,7 @@ body.birthday-50-edition .birthday-bottom-scenery {
     height: 100% !important;
   }
 
-  body.birthday-50-edition.tv-fullscreen
+  body.birthday-40-edition.tv-fullscreen
   .briefcase:not(.center-open):not(.personal-box-reveal) {
     width: 100% !important;
     height: 100% !important;
@@ -4647,7 +4647,7 @@ body.birthday-50-edition .birthday-bottom-scenery {
     justify-self: stretch !important;
   }
 
-  body.birthday-50-edition.tv-fullscreen
+  body.birthday-40-edition.tv-fullscreen
   .briefcase:not(.center-open):not(.personal-box-reveal)
   .briefcase-img {
     width: 100% !important;
@@ -4659,7 +4659,7 @@ body.birthday-50-edition .birthday-bottom-scenery {
     object-position: center 18% !important;
   }
 
-  body.birthday-50-edition.tv-fullscreen
+  body.birthday-40-edition.tv-fullscreen
   .briefcase:not(.center-open):not(.personal-box-reveal)
   .briefcase-number {
     flex: 0 0 2.7vh !important;
